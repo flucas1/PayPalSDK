@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net11.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Tavstal.PayPalSDK</RootNamespace>
         <AssemblyName>Tavstal.PayPalSDK</AssemblyName>
+        <NoWarn>$(NoWarn);CS8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
