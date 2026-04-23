@@ -71,7 +71,7 @@ public class PlanBody
     /// This field is optional and represents a list of billing cycle objects.
     /// </remarks>
     [JsonPropertyName("billing_cycles")]
-    public List<BillingCycle> BillingCycles { get; set; }
+    public List<BillingCycle>? BillingCycles { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether quantity is supported for the plan.
