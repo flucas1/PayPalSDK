@@ -16,27 +16,26 @@ public class PricingScheme
     /// </summary>
     /// <remarks>
     /// The pricing model corresponds to one of the predefined models in <see cref="Tavstal.PayPalSDK.Constants.PricingModelType"/>.
-    /// This field is required and has a maximum length of 24 characters.
+    /// This field has a maximum length of 24 characters.
     /// </remarks>
     [JsonPropertyName("pricing_model")]
     [StringLength(24)]
-    public required string PricingModel { get; set; }
+    public string PricingModel { get; set; }
 
     /// <summary>
-    /// Gets or sets the price associated with the pricing scheme.
+    /// An array of pricing tiers which are used for billing volume/tiered plans.
     /// </summary>
     /// <remarks>
-    /// This field is optional and represents the monetary value of the price.
     /// </remarks>
-    [JsonPropertyName("price")]
-    public Money Price { get; set; }
+    [JsonPropertyName("tiers")]
+    public List<Tier> Tiers { get; set; }
 
     /// <summary>
-    /// Gets or sets the reload threshold amount for the pricing scheme.
+    /// The fixed amount to charge for the subscription.
     /// </summary>
     /// <remarks>
-    /// This field is optional and represents the monetary value of the reload threshold amount.
+    /// The changes to fixed amount are applicable to both existing and future subscriptions. For existing subscriptions, payments within 10 days of price change are not affected.
     /// </remarks>
-    [JsonPropertyName("reload_threshold_amount")]
-    public Money ReloadThresholdAmount { get; set; }
+    [JsonPropertyName("fixed_price")]
+    public Money FixedPrice { get; set; }
 }
