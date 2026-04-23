@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 using Tavstal.PayPalSDK.Models.Common.Payments.Sources.Card;
@@ -8,6 +9,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Orders;
 /// <summary>
 /// Represents the details of a payment authorization, including its status, amount, and related metadata.
 /// </summary>
+[DataContract]
 public class PaymentAuthorization
 {
     /// <summary>

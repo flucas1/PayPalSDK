@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Payments;
 
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Orders;
 /// <summary>
 /// Represents the payments information for a purchase unit, including authorizations, captures, and refunds.
 /// </summary>
+[DataContract]
 public class PaymentsUnit
 {
     /// <summary>

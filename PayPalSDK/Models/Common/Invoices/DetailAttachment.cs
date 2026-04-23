@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Common.Invoices;
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Invoices;
 /// <summary>
 /// Represents an attachment with details for an invoice, such as a file or reference URL.
 /// </summary>
+[DataContract]
 public class DetailAttachment
 {
     /// <summary>

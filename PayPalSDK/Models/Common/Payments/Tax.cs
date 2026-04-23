@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Common.Payments;
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Payments;
 /// <summary>
 /// Represents tax information for a payment.
 /// </summary>
+[DataContract]
 public class Tax
 {
     /// <summary>

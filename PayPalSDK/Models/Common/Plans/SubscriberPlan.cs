@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Billing;
 using Tavstal.PayPalSDK.Models.Common.Payments;
@@ -7,6 +8,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Plans;
 /// <summary>
 /// Represents a subscription plan for a subscriber.
 /// </summary>
+[DataContract]
 public class SubscriberPlan
 {
     /// <summary>

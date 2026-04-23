@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Common.User;
@@ -5,6 +6,7 @@ namespace Tavstal.PayPalSDK.Models.Common.User;
 /// <summary>
 /// Represents the seller protection details in PayPal transactions.
 /// </summary>
+[DataContract]
 public class SellerProtection
 {
     /// <summary>

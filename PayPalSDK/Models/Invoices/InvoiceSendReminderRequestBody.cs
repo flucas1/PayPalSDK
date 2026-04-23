@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Invoices;
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Invoices;
 /// <summary>
 /// Represents the body of a request for sending a reminder for a PayPal invoice.
 /// </summary>
+[DataContract]
 public class InvoiceSendReminderRequestBody
 {
     /// <summary>

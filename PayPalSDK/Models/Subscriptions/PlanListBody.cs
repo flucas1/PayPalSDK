@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
 
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Subscriptions;
 /// <summary>
 /// Represents the body of a response containing a list of subscription plans.
 /// </summary>
+[DataContract]
 public class PlanListBody
 {
     /// <summary>

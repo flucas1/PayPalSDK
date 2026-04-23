@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Common.Addressing;
@@ -10,6 +11,7 @@ namespace Tavstal.PayPalSDK.Models.Subscriptions;
 /// <summary>
 /// Represents the revised body of a subscription request.
 /// </summary>
+[DataContract]
 public class SubscriptionRevisedBody
 {
     /// <summary>

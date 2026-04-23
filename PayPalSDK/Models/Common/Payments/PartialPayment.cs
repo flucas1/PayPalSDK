@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Common.Payments;
@@ -5,6 +6,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Payments;
 /// <summary>
 /// Represents the partial payment options for an invoice, including whether partial payments are allowed and the minimum amount due.
 /// </summary>
+[DataContract]
 public class PartialPayment
 {
     /// <summary>

@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Common.Webhooks;
@@ -5,6 +6,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Webhooks;
 /// <summary>
 /// Represents the body of a webhook event in the PayPal SDK.
 /// </summary>
+[DataContract]
 public class WebhookEventBody
 {
     /// <summary>

@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Addressing;
 using Tavstal.PayPalSDK.Models.Common.Payments;
@@ -8,6 +9,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Orders.Supplementary;
 /// <summary>
 /// Represents Level 3 data for a PayPal order.
 /// </summary>
+[DataContract]
 public class LevelThree
 {
     /// <summary>

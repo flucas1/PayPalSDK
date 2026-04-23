@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.User;
 
@@ -7,6 +8,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Addressing;
 /// <summary>
 /// Represents shipping information for a transaction.
 /// </summary>
+[DataContract]
 public class ShippingInfo
 {
     /// <summary>

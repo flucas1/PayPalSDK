@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Common.User;
 /// <summary>
 /// Represents the seller receivable details in a PayPal transaction.
 /// </summary>
+[DataContract]
 public class SellerRecievable
 {
     /// <summary>

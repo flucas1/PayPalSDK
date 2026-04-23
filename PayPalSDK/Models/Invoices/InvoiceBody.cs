@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Common.Invoices;
@@ -9,6 +10,7 @@ namespace Tavstal.PayPalSDK.Models.Invoices;
 /// <summary>
 /// Represents the full details of a PayPal invoice, including recipients, items, status, configuration, payments, and refunds.
 /// </summary>
+[DataContract]
 public class InvoiceBody
 {
     /// <summary>

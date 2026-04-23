@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Invoices;
 using Tavstal.PayPalSDK.Models.Common.Payments;
@@ -7,6 +8,7 @@ namespace Tavstal.PayPalSDK.Models.Invoices;
 /// <summary>
 /// Represents the request body for updating a PayPal invoice, including recipients, items, details, and configuration.
 /// </summary>
+[DataContract]
 public class InvoiceUpdateRequestBody
 {
     /// <summary>

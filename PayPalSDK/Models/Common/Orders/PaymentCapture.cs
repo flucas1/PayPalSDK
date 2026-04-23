@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 using Tavstal.PayPalSDK.Models.Common.Payments.Sources.Card;
@@ -8,6 +9,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Orders;
 /// <summary>
 /// Represents the details of a payment capture, including its metadata, amount, and related information.
 /// </summary>
+[DataContract]
 public class PaymentCapture
 {
     /// <summary>

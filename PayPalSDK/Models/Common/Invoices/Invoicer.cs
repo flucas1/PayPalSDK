@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Addressing;
 using Tavstal.PayPalSDK.Models.Common.User;
@@ -8,6 +9,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Invoices;
 /// <summary>
 /// Represents the invoicer details for an invoice, including business information, contact details, and additional notes.
 /// </summary>
+[DataContract]
 public class Invoicer
 {
     /// <summary>

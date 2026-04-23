@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 
@@ -7,6 +8,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Invoices;
 /// <summary>
 /// Represents an item in an invoice.
 /// </summary>
+[DataContract]
 public class InvoiceItem
 {
     /// <summary>

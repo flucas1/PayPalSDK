@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Invoices;
 /// <summary>
 /// Represents a refund associated with a PayPal invoice, including transactions and the total refund amount.
 /// </summary>
+[DataContract]
 public class InvoiceRefund
 {
     /// <summary>

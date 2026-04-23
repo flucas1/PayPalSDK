@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Payments;
 /// <summary>
 /// Represents the body of a payment refund request.
 /// </summary>
+[DataContract]
 public class PaymentRefundRequestBody
 {
     /// <summary>

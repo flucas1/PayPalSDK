@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Invoices;
 using Tavstal.PayPalSDK.Models.Common.Payments;
@@ -8,6 +9,7 @@ namespace Tavstal.PayPalSDK.Models.Invoices;
 /// <summary>
 /// Represents the request body for creating a draft invoice, including recipients, items, details, configuration, and payment information.
 /// </summary>
+[DataContract]
 public class InvoiceCreateDraftRequestBody
 {
     /// <summary>

@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Common.Orders.Supplementary;
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Orders.Supplementary;
 /// <summary>
 /// Represents supplementary customer information for a PayPal order.
 /// </summary>
+[DataContract]
 public class SupplementaryCustomer
 {
     /// <summary>

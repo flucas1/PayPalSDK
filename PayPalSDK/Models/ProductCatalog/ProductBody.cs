@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.ProductCatalog;
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.ProductCatalog;
 /// <summary>
 /// Represents the body of a product in the PayPal SDK.
 /// </summary>
+[DataContract]
 public class ProductBody
 {
     /// <summary>

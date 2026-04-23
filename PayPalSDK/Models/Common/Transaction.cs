@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 using Tavstal.PayPalSDK.Models.Common.User;
@@ -8,6 +9,7 @@ namespace Tavstal.PayPalSDK.Models.Common;
 /// <summary>
 /// Represents a transaction in the PayPal SDK.
 /// </summary>
+[DataContract]
 public class Transaction
 {
     /// <summary>

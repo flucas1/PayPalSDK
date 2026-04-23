@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
 
@@ -7,6 +8,7 @@ namespace Tavstal.PayPalSDK.Models.ProductCatalog;
 /// <summary>
 /// Represents an element in the product list.
 /// </summary>
+[DataContract]
 public class ProductListElement
 {
     /// <summary>

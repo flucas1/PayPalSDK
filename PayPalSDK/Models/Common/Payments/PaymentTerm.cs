@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Common.Payments;
@@ -6,6 +7,7 @@ namespace Tavstal.PayPalSDK.Models.Common.Payments;
 /// <summary>
 /// Represents the payment terms for an invoice, including the type of term and the due date.
 /// </summary>
+[DataContract]
 public class PaymentTerm
 {
     /// <summary>
