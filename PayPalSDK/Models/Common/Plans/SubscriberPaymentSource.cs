@@ -13,5 +13,5 @@ public class SubscriberPaymentSource
     /// Gets or sets the subscriber's card information used for payment.
     /// </summary>
     [JsonPropertyName("card")]
-    public SubscriberCard Card { get; set; }
+    public SubscriberCard? Card { get; set; }
 }

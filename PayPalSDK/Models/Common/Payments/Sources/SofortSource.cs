@@ -39,5 +39,5 @@ public class SofortSource
     /// This field is optional and provides additional configuration for the payment experience.
     /// </remarks>
     [JsonPropertyName("experience_context")]
-    public ExperienceContext ExperienceContext { get; set; }
+    public ExperienceContext? ExperienceContext { get; set; }
 }

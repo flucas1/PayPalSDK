@@ -14,11 +14,11 @@ public class PlatformFee
     /// The monetary amount of the platform fee.
     /// </summary>
     [JsonPropertyName("amount")]
-    public Money Amount { get; set; }
+    public Money? Amount { get; set; }
 
     /// <summary>
     /// Information about the payee receiving the platform fee.
     /// </summary>
     [JsonPropertyName("payee")]
-    public Payee Payee { get; set; }
+    public Payee? Payee { get; set; }
 }

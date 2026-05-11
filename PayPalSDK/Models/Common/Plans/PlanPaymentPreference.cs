@@ -28,7 +28,7 @@ public class PlanPaymentPreference
     /// </remarks>
     [JsonPropertyName("setup_fee_failure_action")]
     [StringLength(24)]
-    public string SetupFeeFailureAction { get; set; }
+    public string? SetupFeeFailureAction { get; set; }
 
     /// <summary>
     /// Gets or sets the threshold for payment failures.
@@ -46,5 +46,5 @@ public class PlanPaymentPreference
     /// This field is optional and represents the monetary value of the setup fee.
     /// </remarks>
     [JsonPropertyName("setup_fee")]
-    public Money SetupFee { get; set; }
+    public Money? SetupFee { get; set; }
 }

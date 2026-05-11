@@ -19,5 +19,5 @@ public class Verification
     /// </remarks>
     [JsonPropertyName("amount")]
     [StringLength(255)]
-    public string Method { get; set; }
+    public string? Method { get; set; }
 }

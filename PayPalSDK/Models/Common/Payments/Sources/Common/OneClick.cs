@@ -18,7 +18,7 @@ public class OneClick
     /// </remarks>
     [JsonPropertyName("auth_code")]
     [StringLength(6)]
-    public string AuthCode { get; set; }
+    public string? AuthCode { get; set; }
 
     /// <summary>
     /// Gets or sets the consumer reference associated with the payment source.
@@ -38,7 +38,7 @@ public class OneClick
     /// </remarks>
     [JsonPropertyName("alias_label")]
     [StringLength(35)]
-    public string AliasLabel { get; set; }
+    public string? AliasLabel { get; set; }
 
     /// <summary>
     /// Gets or sets the alias key for the payment source.
@@ -48,5 +48,5 @@ public class OneClick
     /// </remarks>
     [JsonPropertyName("alias_key")]
     [StringLength(19)]
-    public string AliasKey { get; set; }
+    public string? AliasKey { get; set; }
 }

@@ -26,11 +26,11 @@ public class InvoiceListBody
     /// Gets or sets the list of invoice items included in the response.
     /// </summary>
     [JsonPropertyName("items")]
-    public List<InvoiceBody> Items { get; set; }
+    public List<InvoiceBody>? Items { get; set; }
 
     /// <summary>
     /// Gets or sets the list of links related to the response.
     /// </summary>
     [JsonPropertyName("links")]
-    public List<Link> Links { get; set; }
+    public List<Link>? Links { get; set; }
 }

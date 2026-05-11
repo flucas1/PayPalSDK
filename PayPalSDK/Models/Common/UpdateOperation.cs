@@ -25,7 +25,7 @@ public class UpdateOperation
     /// Specifies the location in the resource where the operation is applied.
     /// </remarks>
     [JsonPropertyName("path")]
-    public string Path { get; set; }
+    public string? Path { get; set; }
 
     /// <summary>
     /// Gets or sets the value to be used in the operation.
@@ -34,7 +34,7 @@ public class UpdateOperation
     /// This field is optional and depends on the type of operation being performed.
     /// </remarks>
     [JsonPropertyName("value")]
-    public object Value { get; set; }
+    public object? Value { get; set; }
 
     /// <summary>
     /// Gets or sets the source path for a "move" operation.
@@ -43,5 +43,5 @@ public class UpdateOperation
     /// This field is optional and is used only for "move" operations to specify the source location.
     /// </remarks>
     [JsonPropertyName("from")]
-    public string From { get; set; }
+    public string? From { get; set; }
 }

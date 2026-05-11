@@ -16,5 +16,5 @@ public class Person
     /// This field is optional and will not be emitted if its value is null or default.
     /// </remarks>
     [JsonPropertyName("full_name")]
-    public string FullName { get; set; }
+    public string? FullName { get; set; }
 }

@@ -17,5 +17,5 @@ public class OrderAuthorizeRequestBody
     /// This field is optional and specifies the payment method or source used for the transaction.
     /// </remarks>
     [JsonPropertyName("payment_source")]
-    public PaymentSource PaymentSource { get; set; }
+    public PaymentSource? PaymentSource { get; set; }
 }

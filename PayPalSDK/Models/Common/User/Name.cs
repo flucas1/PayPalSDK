@@ -18,7 +18,7 @@ public class Name
     /// </remarks>
     [JsonPropertyName("given_name")]
     [StringLength(140)]
-    public string GivenName { get; set; }
+    public string? GivenName { get; set; }
 
     /// <summary>
     /// Gets or sets the surname.
@@ -28,5 +28,5 @@ public class Name
     /// </remarks>
     [JsonPropertyName("surname")]
     [StringLength(140)]
-    public string Surname { get; set; }
+    public string? Surname { get; set; }
 }

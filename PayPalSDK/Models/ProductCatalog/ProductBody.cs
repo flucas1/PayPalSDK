@@ -15,7 +15,7 @@ public class ProductBody
     /// </summary>
     [JsonPropertyName("id")]
     [StringLength(50)]
-    public string Id { get; set; }
+    public string? Id { get; set; }
 
     /// <summary>
     /// Gets or sets the name of the product.
@@ -29,7 +29,7 @@ public class ProductBody
     /// </summary>
     [JsonPropertyName("description")]
     [StringLength(256)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     /// <summary>
     /// Gets or sets the type of the product.
@@ -46,19 +46,19 @@ public class ProductBody
     [JsonPropertyName("category")]
     [StringLength(256)]
     [RegularExpression("^[A-Z_]+$")]
-    public string Category { get; set; }
+    public string? Category { get; set; }
 
     /// <summary>
     /// Gets or sets the URL of the product image.
     /// </summary>
     [JsonPropertyName("image_url")]
     [StringLength(2000)]
-    public string ImageUrl { get; set; }
+    public string? ImageUrl { get; set; }
 
     /// <summary>
     /// Gets or sets the URL of the product's homepage.
     /// </summary>
     [JsonPropertyName("home_url")]
     [StringLength(2000)]
-    public string HomeUrl { get; set; }
+    public string? HomeUrl { get; set; }
 }

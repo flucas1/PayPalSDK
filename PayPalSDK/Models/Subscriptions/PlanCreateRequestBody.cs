@@ -41,7 +41,7 @@ public class PlanCreateRequestBody
     /// </remarks>
     [JsonPropertyName("status")]
     [StringLength(24)]
-    public string Status { get; set; }
+    public string? Status { get; set; }
 
     /// <summary>
     /// Gets or sets the description of the plan.
@@ -51,7 +51,7 @@ public class PlanCreateRequestBody
     /// </remarks>
     [JsonPropertyName("description")]
     [StringLength(127)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     /// <summary>
     /// Gets or sets the billing cycles associated with the plan.
@@ -87,5 +87,5 @@ public class PlanCreateRequestBody
     /// This field is optional and represents the tax details for the plan.
     /// </remarks>
     [JsonPropertyName("taxes")]
-    public Taxes Taxes { get; set; }
+    public Taxes? Taxes { get; set; }
 }

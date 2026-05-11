@@ -31,7 +31,7 @@ public class Tier
     /// </remarks>
     [JsonPropertyName("ending_quantity")]
     [StringLength(32)]
-    public string EndingQuantity { get; set; }
+    public string? EndingQuantity { get; set; }
 
     /// <summary>
     /// The pricing amount for the tier.

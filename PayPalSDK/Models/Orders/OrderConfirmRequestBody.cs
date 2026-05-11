@@ -18,7 +18,7 @@ public class OrderConfirmRequestBody
     /// This field is optional and provides additional details about the transaction, such as branding and URLs.
     /// </remarks>
     [JsonPropertyName("application_context")]
-    public ApplicationContext ApplicationContext { get; set; }
+    public ApplicationContext? ApplicationContext { get; set; }
 
     /// <summary>
     /// Gets or sets the payment source for the order confirmation.

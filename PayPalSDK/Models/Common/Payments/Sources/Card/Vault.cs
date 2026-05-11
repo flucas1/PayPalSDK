@@ -19,5 +19,5 @@ public class Vault
     [JsonPropertyName("store_in_vault")]
     [StringLength(255)]
     [RegularExpression("^[0-9A-Z_]+$")]
-    public string StoreInVault { get; set; }
+    public string? StoreInVault { get; set; }
 }

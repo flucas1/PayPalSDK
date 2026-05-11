@@ -28,7 +28,7 @@ public class Tax
     /// </remarks>
     [JsonPropertyName("tax_note")]
     [StringLength(40)]
-    public string TaxNote { get; set; }
+    public string? TaxNote { get; set; }
 
     /// <summary>
     /// Gets or sets the percentage value of the tax.

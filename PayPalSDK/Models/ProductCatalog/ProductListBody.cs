@@ -14,7 +14,7 @@ public class ProductListBody
     /// Gets or sets the list of products in the response.
     /// </summary>
     [JsonPropertyName("products")]
-    public List<ProductListElement> Products { get; set; }
+    public List<ProductListElement>? Products { get; set; }
 
     /// <summary>
     /// Gets or sets the total number of items in the product list.
@@ -32,5 +32,5 @@ public class ProductListBody
     /// Gets or sets the list of links associated with the product list.
     /// </summary>
     [JsonPropertyName("links")]
-    public List<Link> Links { get; set; }
+    public List<Link>? Links { get; set; }
 }

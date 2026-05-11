@@ -32,7 +32,7 @@ public class PayPalStoredCredentials
     /// </summary>
     [StringLength(30)]
     [RegularExpression("^[0-9A-Z_]+$")]
-    public string UsagePattern { get; set; }
+    public string? UsagePattern { get; set; }
 
     /// <summary>
     /// Gets or sets the usage of the credential.
@@ -41,5 +41,5 @@ public class PayPalStoredCredentials
     [JsonPropertyName("usage")]
     [StringLength(255)]
     [RegularExpression("^[0-9A-Z_]+$")]
-    public string Usage { get; set; }
+    public string? Usage { get; set; }
 }

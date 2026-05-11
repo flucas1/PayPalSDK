@@ -17,7 +17,7 @@ public class Phone
     /// This field is optional and represents the type of phone (e.g., mobile, home, work).
     /// </remarks>
     [JsonPropertyName("phone_type")]
-    public string PhoneType { get; set; }
+    public string? PhoneType { get; set; }
 
     /// <summary>
     /// Gets or sets the phone number details.

@@ -17,5 +17,5 @@ public class StatusDetails
     [JsonPropertyName("reason")]
     [StringLength(64)]
     [RegularExpression("^[A-Z_]+$")]
-    public string Reason { get; set; }
+    public string? Reason { get; set; }
 }
