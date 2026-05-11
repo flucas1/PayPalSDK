@@ -18,7 +18,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using a card.
     /// </remarks>
     [JsonPropertyName("card")]
-    public CardSource CardSource { get; set; }
+    public CardSource? CardSource { get; set; }
 
     /// <summary>
     /// Gets or sets the token payment source.
@@ -27,7 +27,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using a token.
     /// </remarks>
     [JsonPropertyName("token")]
-    public TokenSource Token { get; set; }
+    public TokenSource? Token { get; set; }
 
     /// <summary>
     /// Gets or sets the PayPal payment source.
@@ -36,7 +36,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using PayPal.
     /// </remarks>
     [JsonPropertyName("paypal")]
-    public PayPalSource PayPal { get; set; }
+    public PayPalSource? PayPal { get; set; }
 
     /// <summary>
     /// Gets or sets the Bancontact payment source.
@@ -45,7 +45,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using Bancontact.
     /// </remarks>
     [JsonPropertyName("bancontact")]
-    public BanContactSource BanContact { get; set; }
+    public BanContactSource? BanContact { get; set; }
 
     /// <summary>
     /// Gets or sets the Blik payment source.
@@ -54,7 +54,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using Blik.
     /// </remarks>
     [JsonPropertyName("blik")]
-    public BlikSource Blik { get; set; }
+    public BlikSource? Blik { get; set; }
 
     /// <summary>
     /// Gets or sets the EPS payment source.
@@ -63,7 +63,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using EPS.
     /// </remarks>
     [JsonPropertyName("eps")]
-    public EpsSource Eps { get; set; }
+    public EpsSource? Eps { get; set; }
 
     /// <summary>
     /// Gets or sets the GiroPay payment source.
@@ -72,7 +72,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using GiroPay.
     /// </remarks>
     [JsonPropertyName("giropay")]
-    public GiroPaySource GiroPay { get; set; }
+    public GiroPaySource? GiroPay { get; set; }
 
     /// <summary>
     /// Gets or sets the iDEAL payment source.
@@ -81,7 +81,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using iDEAL.
     /// </remarks>
     [JsonPropertyName("ideal")]
-    public IdealSource Ideal { get; set; }
+    public IdealSource? Ideal { get; set; }
 
     /// <summary>
     /// Gets or sets the MyBank payment source.
@@ -90,7 +90,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using MyBank.
     /// </remarks>
     [JsonPropertyName("mybank")]
-    public MyBankSource MyBank { get; set; }
+    public MyBankSource? MyBank { get; set; }
 
     /// <summary>
     /// Gets or sets the P24 payment source.
@@ -99,7 +99,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using P24.
     /// </remarks>
     [JsonPropertyName("p24")]
-    public PTwentyFourSource PTwentyFour { get; set; }
+    public PTwentyFourSource? PTwentyFour { get; set; }
 
     /// <summary>
     /// Gets or sets the Sofort payment source.
@@ -108,7 +108,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using Sofort.
     /// </remarks>
     [JsonPropertyName("sofort")]
-    public SofortSource Sofort { get; set; }
+    public SofortSource? Sofort { get; set; }
 
     /// <summary>
     /// Gets or sets the Trustuly payment source.
@@ -117,7 +117,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using Trustuly.
     /// </remarks>
     [JsonPropertyName("trustuly")]
-    public TrustulySource Trustuly { get; set; }
+    public TrustulySource? Trustuly { get; set; }
 
     /// <summary>
     /// Gets or sets the Apple Pay payment source.
@@ -126,7 +126,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using Apple Pay.
     /// </remarks>
     [JsonPropertyName("apple_pay")]
-    public ApplePaySource ApplePay { get; set; }
+    public ApplePaySource? ApplePay { get; set; }
     
     /// <summary>
     /// Gets or sets the Google Pay payment source.
@@ -135,7 +135,7 @@ public class PaymentSource
     /// This field is optional and represents payment details using Google Pay.
     /// </remarks>
     [JsonPropertyName("google_pay")]
-    public GooglePaySource GooglePay { get; set; }
+    public GooglePaySource? GooglePay { get; set; }
 
     /// <summary>
     /// Gets or sets the Venmo payment source.
@@ -144,5 +144,5 @@ public class PaymentSource
     /// This field is optional and represents payment details using Venmo.
     /// </remarks>
     [JsonPropertyName("venmo")]
-    public VenmoSource Venmo { get; set; }
+    public VenmoSource? Venmo { get; set; }
 }

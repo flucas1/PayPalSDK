@@ -22,7 +22,7 @@ public class PlanBody
     /// </remarks>
     [JsonPropertyName("id")]
     [StringLength(26)]
-    public string Id { get; set; }
+    public string? Id { get; set; }
 
     /// <summary>
     /// Gets or sets the product ID associated with the plan.
@@ -32,7 +32,7 @@ public class PlanBody
     /// </remarks>
     [JsonPropertyName("product_id")]
     [StringLength(22)]
-    public string ProductId { get; set; }
+    public string? ProductId { get; set; }
 
     /// <summary>
     /// Gets or sets the name of the plan.
@@ -42,7 +42,7 @@ public class PlanBody
     /// </remarks>
     [JsonPropertyName("name")]
     [StringLength(127)]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     /// <summary>
     /// Gets or sets the status of the plan.
@@ -52,7 +52,7 @@ public class PlanBody
     /// </remarks>
     [JsonPropertyName("status")]
     [StringLength(24)]
-    public string Status { get; set; }
+    public string? Status { get; set; }
 
     /// <summary>
     /// Gets or sets the description of the plan.
@@ -62,7 +62,7 @@ public class PlanBody
     /// </remarks>
     [JsonPropertyName("description")]
     [StringLength(127)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     /// <summary>
     /// Gets or sets the billing cycles associated with the plan.
@@ -89,7 +89,7 @@ public class PlanBody
     /// This field is optional and represents a list of link objects.
     /// </remarks>
     [JsonPropertyName("links")]
-    public List<Link> Links { get; set; }
+    public List<Link>? Links { get; set; }
 
     /// <summary>
     /// Gets or sets the payment preferences for the plan.
@@ -98,7 +98,7 @@ public class PlanBody
     /// This field is optional and represents the payment preferences object.
     /// </remarks>
     [JsonPropertyName("payment_preferences")]
-    public PlanPaymentPreference PaymentPreferences { get; set; }
+    public PlanPaymentPreference? PaymentPreferences { get; set; }
 
     /// <summary>
     /// Gets or sets the tax information for the plan.
@@ -107,7 +107,7 @@ public class PlanBody
     /// This field is optional and represents the tax details for the plan.
     /// </remarks>
     [JsonPropertyName("taxes")]
-    public Taxes Taxes { get; set; }
+    public Taxes? Taxes { get; set; }
 
     /// <summary>
     /// Gets or sets the creation time of the plan.
@@ -118,7 +118,7 @@ public class PlanBody
     [JsonPropertyName("create_time")]
     [StringLength(64)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
-    public string CreateTime { get; set; }
+    public string? CreateTime { get; set; }
 
     /// <summary>
     /// Gets or sets the last update time of the plan.
@@ -129,5 +129,5 @@ public class PlanBody
     [JsonPropertyName("update_time")]
     [StringLength(64)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
-    public string UpdateTime { get; set; }
+    public string? UpdateTime { get; set; }
 }

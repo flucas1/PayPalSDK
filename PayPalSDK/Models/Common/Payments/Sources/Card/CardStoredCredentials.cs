@@ -35,11 +35,11 @@ public class CardStoredCredentials
     [JsonPropertyName("usage")]
     [StringLength(255)]
     [RegularExpression("^[0-9A-Z_]+$")]
-    public string Usage { get; set; }
+    public string? Usage { get; set; }
 
     /// <summary>
     /// Gets or sets the reference to the previous network transaction.
     /// </summary>
     [JsonPropertyName("previous_network_transaction_reference")]
-    public NetworkTransactionReference PrevNetworkTransactionReference { get; set; }
+    public NetworkTransactionReference? PrevNetworkTransactionReference { get; set; }
 }

@@ -17,7 +17,7 @@ public class PaymentInstruction
     /// This field is optional and represents the fees charged by the platform.
     /// </remarks>
     [JsonPropertyName("platform_fees")]
-    public List<PlatformFee> PlatformFees { get; set; }
+    public List<PlatformFee>? PlatformFees { get; set; }
 
     /// <summary>
     /// Gets or sets the payee pricing tier ID.
@@ -27,7 +27,7 @@ public class PaymentInstruction
     /// </remarks>
     [JsonPropertyName("payee_pricing_tier_id")]
     [StringLength(20)]
-    public string PayeePricingTierId { get; set; }
+    public string? PayeePricingTierId { get; set; }
 
     /// <summary>
     /// Gets or sets the payee receivable foreign exchange rate ID.
@@ -37,7 +37,7 @@ public class PaymentInstruction
     /// </remarks>
     [JsonPropertyName("payee_receivable_fx_rate_id")]
     [StringLength(4000)]
-    public string PayeeReceivableFxRateId { get; set; }
+    public string? PayeeReceivableFxRateId { get; set; }
 
     /// <summary>
     /// Gets or sets the disbursement mode.
@@ -49,5 +49,5 @@ public class PaymentInstruction
     [JsonPropertyName("disbursement_mode")]
     [StringLength(16)]
     [RegularExpression("^[A-Z_]+$")]
-    public string DisbursementMode { get; set; }
+    public string? DisbursementMode { get; set; }
 }

@@ -32,7 +32,7 @@ public class NetworkTransactionReference
     /// </summary>
     [JsonPropertyName("date")]
     [StringLength(4)]
-    public string Date { get; set; }
+    public string? Date { get; set; }
 
     /// <summary>
     /// Gets or sets the reference ID issued for the card transaction.
@@ -40,7 +40,7 @@ public class NetworkTransactionReference
     /// </summary>
     [JsonPropertyName("acquirer_reference_number")]
     [StringLength(36)]
-    public string AcquirerReferenceNumber { get; set; }
+    public string? AcquirerReferenceNumber { get; set; }
 
     /// <summary>
     /// Gets or sets the name of the card network through which the transaction was routed.
@@ -48,5 +48,5 @@ public class NetworkTransactionReference
     /// </summary>
     [JsonPropertyName("network")]
     [StringLength(255)]
-    public string Network { get; set; }
+    public string? Network { get; set; }
 }

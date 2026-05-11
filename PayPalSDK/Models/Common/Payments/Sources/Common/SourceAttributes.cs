@@ -18,7 +18,7 @@ public class SourceAttributes
     /// This field is optional and represents the customer information.
     /// </remarks>
     [JsonPropertyName("customer")]
-    public Customer Customer { get; set; }
+    public Customer? Customer { get; set; }
 
     /// <summary>
     /// Gets or sets the vault details associated with the card payment source.
@@ -27,5 +27,5 @@ public class SourceAttributes
     /// This field is optional and represents the vault information.
     /// </remarks>
     [JsonPropertyName("vault")]
-    public Vault Vault { get; set; }
+    public Vault? Vault { get; set; }
 }

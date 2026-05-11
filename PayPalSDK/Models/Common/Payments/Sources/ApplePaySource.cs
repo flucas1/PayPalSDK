@@ -22,7 +22,7 @@ public class ApplePaySource
     /// </remarks>
     [JsonPropertyName("id")]
     [StringLength(250)]
-    public string Id { get; set; }
+    public string? Id { get; set; }
 
     /// <summary>
     /// Gets or sets the stored credentials associated with the Apple Pay payment source.
@@ -31,7 +31,7 @@ public class ApplePaySource
     /// This field is optional and represents card-related stored credentials.
     /// </remarks>
     [JsonPropertyName("stored_credential")]
-    public CardStoredCredentials StoredCredential { get; set; }
+    public CardStoredCredentials? StoredCredential { get; set; }
 
     /// <summary>
     /// Gets or sets the attributes associated with the Apple Pay payment source.
@@ -40,7 +40,7 @@ public class ApplePaySource
     /// This field is optional and represents additional metadata for the payment source.
     /// </remarks>
     [JsonPropertyName("attributes")]
-    public SourceAttributes Attributes { get; set; }
+    public SourceAttributes? Attributes { get; set; }
 
     /// <summary>
     /// Gets or sets the name associated with the Apple Pay payment source.
@@ -50,7 +50,7 @@ public class ApplePaySource
     /// </remarks>
     [JsonPropertyName("name")]
     [StringLength(300)]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     /// <summary>
     /// Gets or sets the email address associated with the Apple Pay payment source.
@@ -61,7 +61,7 @@ public class ApplePaySource
     [JsonPropertyName("email_address")]
     [StringLength(254)]
     [RegularExpression("^(?:[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[A-Za-z0-9-]*[A-Za-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$")]
-    public string EmailAddress { get; set; }
+    public string? EmailAddress { get; set; }
 
     /// <summary>
     /// Gets or sets the phone number associated with the Apple Pay payment source.
@@ -70,7 +70,7 @@ public class ApplePaySource
     /// This field is optional and represents the phone number details.
     /// </remarks>
     [JsonPropertyName("phone_number")]
-    public PhoneNumber PhoneNumber { get; set; }
+    public PhoneNumber? PhoneNumber { get; set; }
 
     /// <summary>
     /// Gets or sets the decrypted token associated with the Apple Pay payment source.
@@ -79,7 +79,7 @@ public class ApplePaySource
     /// This field is optional and represents the decrypted token details.
     /// </remarks>
     [JsonPropertyName("decrypted_token")]
-    public AppleDecryptedToken DecryptedToken { get; set; }
+    public AppleDecryptedToken? DecryptedToken { get; set; }
 
     /// <summary>
     /// Gets or sets the vault ID associated with the Apple Pay payment source.
@@ -90,7 +90,7 @@ public class ApplePaySource
     [JsonPropertyName("vault_id")]
     [StringLength(255)]
     [RegularExpression("^[0-9a-zA-Z_-]+$")]
-    public string VaultId { get; set; }
+    public string? VaultId { get; set; }
 
     /// <summary>
     /// Gets or sets the experience context for configuring the Apple Pay payment experience.
@@ -99,5 +99,5 @@ public class ApplePaySource
     /// This field is optional and provides additional configuration for the payment experience.
     /// </remarks>
     [JsonPropertyName("experience_context")]
-    public ExperienceContext ExperienceContext { get; set; }
+    public ExperienceContext? ExperienceContext { get; set; }
 }

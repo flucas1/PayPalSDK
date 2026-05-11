@@ -16,7 +16,7 @@ public class Transaction
     /// Gets or sets the status of the transaction.
     /// </summary>
     [JsonPropertyName("status")]
-    public string Status { get; set; }
+    public string? Status { get; set; }
 
     /// <summary>
     /// Gets or sets the unique identifier of the transaction.
@@ -35,7 +35,7 @@ public class Transaction
     /// Gets or sets the name information of the payer.
     /// </summary>
     [JsonPropertyName("payer_name")]
-    public NameInfo PayerName { get; set; }
+    public NameInfo? PayerName { get; set; }
 
     /// <summary>
     /// Gets or sets the email address of the payer.
@@ -43,7 +43,7 @@ public class Transaction
     [JsonPropertyName("payer_email")]
     [StringLength(254)]
     [RegularExpression("^.+@[^\"\\-].+$")]
-    public string PayerEmail { get; set; }
+    public string? PayerEmail { get; set; }
 
     /// <summary>
     /// Gets or sets the timestamp of the transaction in ISO 8601 format.
