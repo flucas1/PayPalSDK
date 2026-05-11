@@ -44,7 +44,7 @@ public class BillingCycle
     /// This field is optional and represents the pricing details for the billing cycle.
     /// </remarks>
     [JsonPropertyName("pricing_scheme")]
-    public PricingScheme PricingScheme { get; set; }
+    public PricingScheme? PricingScheme { get; set; }
 
     /// <summary>
     /// Gets or sets the start date of the billing cycle.
@@ -55,7 +55,7 @@ public class BillingCycle
     [JsonPropertyName("start_date")]
     [StringLength(10)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$")]
-    public string StartDate { get; set; }
+    public string? StartDate { get; set; }
     
     /// <summary>
     /// Gets or sets the frequency of the billing cycle.

@@ -13,7 +13,7 @@ public class AccessToken
     /// The access token string provided by the PayPal API.
     /// </summary>
     [JsonPropertyName("access_token")]
-    public string Token { get; set; }
+    public string? Token { get; set; }
 
     /// <summary>
     /// The type of the token (e.g., Bearer).

@@ -48,7 +48,7 @@ public class ShippingOption
     /// It is optional and will not be emitted if its value is null or default.
     /// </remarks>
     [JsonPropertyName("type")]
-    public string Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>
     /// Gets or sets the amount associated with the shipping option.
@@ -57,5 +57,5 @@ public class ShippingOption
     /// This field is optional and represents the cost or value of the shipping option.
     /// </remarks>
     [JsonPropertyName("amount")]
-    public Money Amount { get; set; }
+    public Money? Amount { get; set; }
 }

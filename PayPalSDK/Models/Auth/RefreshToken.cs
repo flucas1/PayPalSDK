@@ -10,7 +10,7 @@ public class RefreshToken
     /// The refresh token string.
     /// </summary>
     [JsonPropertyName("refresh_token")]
-    public string Token;
+    public string? Token;
 
     /// <summary>
     /// The type of the token.

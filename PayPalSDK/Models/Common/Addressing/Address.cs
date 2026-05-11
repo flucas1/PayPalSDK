@@ -18,7 +18,7 @@ public class Address
     /// </remarks>
     [JsonPropertyName("address_line_1")]
     [StringLength(300)]
-    public string AddressLineOne { get; set; }
+    public string? AddressLineOne { get; set; }
 
     /// <summary>
     /// Gets or sets the second line of the address.
@@ -28,7 +28,7 @@ public class Address
     /// </remarks>
     [JsonPropertyName("address_line_2")]
     [StringLength(300)]
-    public string AddressLineTwo { get; set; }
+    public string? AddressLineTwo { get; set; }
 
     /// <summary>
     /// Gets or sets the administrative area (e.g., state or province).
@@ -38,7 +38,7 @@ public class Address
     /// </remarks>
     [JsonPropertyName("admin_area_1")]
     [StringLength(300)]
-    public string AdminAreaOne { get; set; }
+    public string? AdminAreaOne { get; set; }
 
     /// <summary>
     /// Gets or sets the locality or city.
@@ -48,7 +48,7 @@ public class Address
     /// </remarks>
     [JsonPropertyName("admin_area_2")]
     [StringLength(120)]
-    public string AdminAreaTwo { get; set; }
+    public string? AdminAreaTwo { get; set; }
 
     /// <summary>
     /// Gets or sets the postal code.
@@ -58,7 +58,7 @@ public class Address
     /// </remarks>
     [JsonPropertyName("postal_code")]
     [StringLength(60)]
-    public string PostalCode { get; set; }
+    public string? PostalCode { get; set; }
 
     /// <summary>
     /// Gets or sets the country code in ISO 3166-1 alpha-2 format.

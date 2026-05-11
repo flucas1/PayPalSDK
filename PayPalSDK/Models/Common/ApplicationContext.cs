@@ -19,7 +19,7 @@ public class ApplicationContext
     /// </remarks>
     [JsonPropertyName("brand_name")]
     [StringLength(127)]
-    public string BrandName { get; set; }
+    public string? BrandName { get; set; }
 
     /// <summary>
     /// Gets or sets the URL to which the customer is redirected after approving the payment.
@@ -29,7 +29,7 @@ public class ApplicationContext
     /// </remarks>
     [JsonPropertyName("return_url")]
     [StringLength(4000)]
-    public string ReturnUrl { get; set; }
+    public string? ReturnUrl { get; set; }
 
     /// <summary>
     /// Gets or sets the URL to which the customer is redirected if they cancel the payment.
@@ -39,7 +39,7 @@ public class ApplicationContext
     /// </remarks>
     [JsonPropertyName("cancel_url")]
     [StringLength(4000)]
-    public string CancelUrl { get; set; }
+    public string? CancelUrl { get; set; }
 
     /// <summary>
     /// Gets or sets the locale for the PayPal checkout experience.
@@ -51,11 +51,11 @@ public class ApplicationContext
     [JsonPropertyName("locale")]
     [StringLength(10)]
     [RegularExpression("^[a-z]{2}(?:-[A-Z][a-z]{3})?(?:-(?:[A-Z]{2}|[0-9]{3}))?$")]
-    public string Locale { get; set; }
+    public string? Locale { get; set; }
 
     /// <summary>
     /// Gets or sets the stored payment source for the transaction.
     /// </summary>
     [JsonPropertyName("stored_payment_source")]
-    public PaymentSource StoredPaymentSource { get; set; }
+    public PaymentSource? StoredPaymentSource { get; set; }
 }

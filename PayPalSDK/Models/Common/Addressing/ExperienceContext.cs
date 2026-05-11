@@ -15,7 +15,7 @@ public class ExperienceContext
     /// </summary>
     [JsonPropertyName("brand_name")]
     [StringLength(127)]
-    public string BrandName { get; set; }
+    public string? BrandName { get; set; }
 
     /// <summary>
     /// The type of landing page to show on the PayPal site for customer checkout.
@@ -23,7 +23,7 @@ public class ExperienceContext
     /// </summary>
     [JsonPropertyName("landing_page")]
     [StringLength(13)]
-    public string LandingPage { get; set; }
+    public string? LandingPage { get; set; }
 
     /// <summary>
     /// The shipping preference for the PayPal payment experience.
@@ -31,7 +31,7 @@ public class ExperienceContext
     /// </summary>
     [JsonPropertyName("shipping_preference")]
     [StringLength(24)]
-    public string ShippingPreference { get; set; }
+    public string? ShippingPreference { get; set; }
 
     /// <summary>
     /// Configures the user action for the checkout flow.
@@ -39,19 +39,19 @@ public class ExperienceContext
     /// </summary>
     [JsonPropertyName("user_action")]
     [StringLength(8)]
-    public string UserAction { get; set; }
+    public string? UserAction { get; set; }
 
     /// <summary>
     /// The URL where the customer is redirected after approving the payment.
     /// </summary>
     [JsonPropertyName("return_url")]
-    public string ReturnUrl { get; set; }
+    public string? ReturnUrl { get; set; }
 
     /// <summary>
     /// The URL where the customer is redirected after canceling the payment.
     /// </summary>
     [JsonPropertyName("cancel_url")]
-    public string CancelUrl { get; set; }
+    public string? CancelUrl { get; set; }
 
     /// <summary>
     /// The BCP 47-formatted locale of pages displayed during the PayPal payment experience.
@@ -59,7 +59,7 @@ public class ExperienceContext
     [JsonPropertyName("locale")]
     [StringLength(10)]
     [RegularExpression("^[a-z]{2}(?:-[A-Z][a-z]{3})?(?:-(?:[A-Z]{2}|[0-9]{3}))?$")]
-    public string Locale { get; set; }
+    public string? Locale { get; set; }
 
     /// <summary>
     /// The merchant-preferred payment methods.
@@ -67,7 +67,7 @@ public class ExperienceContext
     /// </summary>
     [JsonPropertyName("payment_method_preference")]
     [StringLength(255)]
-    public string PaymentMethodPreference { get; set; }
+    public string? PaymentMethodPreference { get; set; }
 
     /// <summary>
     /// The contact preference for the merchant.
@@ -75,5 +75,5 @@ public class ExperienceContext
     /// </summary>
     [JsonPropertyName("contact_preference")]
     [StringLength(24)]
-    public string ContactPreference { get; set; }
+    public string? ContactPreference { get; set; }
 }

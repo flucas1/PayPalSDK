@@ -20,7 +20,7 @@ public class PricingScheme
     /// </remarks>
     [JsonPropertyName("pricing_model")]
     [StringLength(24)]
-    public string PricingModel { get; set; }
+    public string? PricingModel { get; set; }
 
     /// <summary>
     /// An array of pricing tiers which are used for billing volume/tiered plans.
@@ -28,7 +28,7 @@ public class PricingScheme
     /// <remarks>
     /// </remarks>
     [JsonPropertyName("tiers")]
-    public List<Tier> Tiers { get; set; }
+    public List<Tier>? Tiers { get; set; }
 
     /// <summary>
     /// The fixed amount to charge for the subscription.
@@ -37,5 +37,5 @@ public class PricingScheme
     /// The changes to fixed amount are applicable to both existing and future subscriptions. For existing subscriptions, payments within 10 days of price change are not affected.
     /// </remarks>
     [JsonPropertyName("fixed_price")]
-    public Money FixedPrice { get; set; }
+    public Money? FixedPrice { get; set; }
 }

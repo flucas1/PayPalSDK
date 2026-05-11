@@ -19,17 +19,17 @@ public class ShippingInfo
     /// </remarks>
     [JsonPropertyName("business_name")]
     [StringLength(300)]
-    public string BusinessName { get; set; }
+    public string? BusinessName { get; set; }
 
     /// <summary>
     /// Gets or sets the name information of the recipient.
     /// </summary>
     [JsonPropertyName("name")]
-    public NameInfo Name { get; set; }
+    public NameInfo? Name { get; set; }
 
     /// <summary>
     /// Gets or sets the address information for shipping.
     /// </summary>
     [JsonPropertyName("address")]
-    public Address Address { get; set; }
+    public Address? Address { get; set; }
 }

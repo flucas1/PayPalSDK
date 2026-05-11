@@ -17,7 +17,7 @@ public class BillingInfo
     /// Each cycle execution provides details about the execution of a billing cycle.
     /// </remarks>
     [JsonPropertyName("cycle_executions")]
-    public List<CycleExecution> CycleExecutions { get; set; }
+    public List<CycleExecution>? CycleExecutions { get; set; }
 
     /// <summary>
     /// Gets or sets the count of failed payments.
@@ -26,7 +26,7 @@ public class BillingInfo
     /// This value represents the total number of payment failures for the billing plan.
     /// </remarks>
     [JsonPropertyName("failed_payment_count")]
-    public required int FailedPaymentCount { get; set; }
+    public required int? FailedPaymentCount { get; set; }
 
     /// <summary>
     /// Gets or sets the outstanding balance for the billing plan.
@@ -44,7 +44,7 @@ public class BillingInfo
     /// The last payment is represented as a <see cref="LastPayment"/> object.
     /// </remarks>
     [JsonPropertyName("last_payment")]
-    public LastPayment LastPayment { get; set; }
+    public LastPayment? LastPayment { get; set; }
     
     /// <summary>
     /// Gets or sets the time for the next billing cycle.
@@ -53,7 +53,7 @@ public class BillingInfo
     /// The time must follow the format "YYYY-MM-DDTHH:mm:ss.sssZ" or include a timezone offset.
     /// </remarks>
     [JsonPropertyName("next_billing_time")]
-    public string NextBillingTime { get; set; }
+    public string? NextBillingTime { get; set; }
 
     /// <summary>
     /// Gets or sets the time for the final payment in the billing plan.
@@ -62,7 +62,7 @@ public class BillingInfo
     /// The time must follow the format "YYYY-MM-DDTHH:mm:ss.sssZ" or include a timezone offset.
     /// </remarks>
     [JsonPropertyName("final_payment_time")]
-    public string FinalPaymentTime { get; set; }
+    public string? FinalPaymentTime { get; set; }
 
     /// <summary>
     /// Gets or sets the details of the last failed payment.
@@ -71,5 +71,5 @@ public class BillingInfo
     /// The last failed payment is represented as a <see cref="FailedPayment"/> object.
     /// </remarks>
     [JsonPropertyName("last_failed_payment")]
-    public FailedPayment LastFailedPayment { get; set; }
+    public FailedPayment? LastFailedPayment { get; set; }
 }
