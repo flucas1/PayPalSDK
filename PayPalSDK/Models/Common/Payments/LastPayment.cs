@@ -17,7 +17,7 @@ public class LastPayment
     /// The status must match one of the values defined in <see cref="Tavstal.PayPalSDK.Constants.PaymentStatus"/>.
     /// </remarks>
     [JsonPropertyName("status")]
-    public string Status { get; set; }
+    public string? Status { get; set; }
     
     /// <summary>
     /// Gets or sets the amount of the last payment.

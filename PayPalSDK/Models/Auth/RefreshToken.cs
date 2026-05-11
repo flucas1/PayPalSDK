@@ -16,19 +16,19 @@ public class RefreshToken
     /// The type of the token.
     /// </summary>
     [JsonPropertyName("token_type")]
-    public string TokenType;
+    public string? TokenType;
 
     /// <summary>
     /// The expiration time of the token in seconds.
     /// </summary>
     [JsonPropertyName("expires_in")]
-    public string ExpiresIn;
+    public string? ExpiresIn;
 
     /// <summary>
     /// The ID token.
     /// </summary>
     [JsonPropertyName("id_token")]
-    public string IdToken;
+    public string? IdToken;
     
     /// <summary>
     /// Converts the current <see cref="RefreshToken"/> instance to an <see cref="AccessToken"/> instance.

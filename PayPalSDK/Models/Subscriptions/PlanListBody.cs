@@ -14,7 +14,7 @@ public class PlanListBody
     /// Gets or sets the list of subscription plans.
     /// </summary>
     [JsonPropertyName("plans")]
-    public List<PlanBody> Plans { get; set; }
+    public List<PlanBody>? Plans { get; set; }
 
     /// <summary>
     /// Gets or sets the total number of items in the response.
@@ -32,5 +32,5 @@ public class PlanListBody
     /// Gets or sets the list of links associated with the response.
     /// </summary>
     [JsonPropertyName("links")]
-    public List<Link> Links { get; set; }
+    public List<Link>? Links { get; set; }
 }

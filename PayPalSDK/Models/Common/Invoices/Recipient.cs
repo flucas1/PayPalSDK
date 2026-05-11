@@ -18,7 +18,7 @@ public class Recipient
     /// This includes details such as the business name, contact information, and address.
     /// </remarks>
     [JsonPropertyName("billing_info")]
-    public BusinessBillingInfo BillingInfo { get; set; }
+    public BusinessBillingInfo? BillingInfo { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping information of the recipient.
@@ -27,5 +27,5 @@ public class Recipient
     /// This includes details such as the shipping address and recipient name.
     /// </remarks>
     [JsonPropertyName("shipping_info")]
-    public ShippingInfo ShippingInfo { get; set; }
+    public ShippingInfo? ShippingInfo { get; set; }
 }

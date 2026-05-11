@@ -19,7 +19,7 @@ public class Card
     /// </remarks>
     [JsonPropertyName("name")]
     [StringLength(300)]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     /// <summary>
     /// Gets or sets the card number.
@@ -52,7 +52,7 @@ public class Card
     [JsonPropertyName("type")]
     [StringLength(255)]
     [RegularExpression("^[A-Z_]+$")]
-    public string Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>
     /// Gets or sets the brand of the card.
@@ -64,7 +64,7 @@ public class Card
     [JsonPropertyName("brand")]
     [StringLength(255)]
     [RegularExpression("^[A-Z_]+$")]
-    public string Brand { get; set; }
+    public string? Brand { get; set; }
 
     /// <summary>
     /// Gets or sets the billing address associated with the card.
@@ -73,5 +73,5 @@ public class Card
     /// This field is optional and represents the billing address details.
     /// </remarks>
     [JsonPropertyName("billing_address")]
-    public Address BillingAddress { get; set; }
+    public Address? BillingAddress { get; set; }
 }

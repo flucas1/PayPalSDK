@@ -19,7 +19,7 @@ public class AccessToken
     /// The type of the token (e.g., Bearer).
     /// </summary>
     [JsonPropertyName("token_type")]
-    public string TokenType { get; set; }
+    public string? TokenType { get; set; }
 
     /// <summary>
     /// The duration in seconds until the token expires.

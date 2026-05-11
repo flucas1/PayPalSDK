@@ -14,5 +14,5 @@ public class WebhookListResponseBody
     /// Gets or sets the list of webhooks returned in the response.
     /// </summary>
     [JsonPropertyName("webhooks")]
-    public List<Webhook> Webhooks { get; set; }
+    public List<Webhook>? Webhooks { get; set; }
 }

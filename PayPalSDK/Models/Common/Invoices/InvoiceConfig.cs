@@ -33,7 +33,7 @@ public class InvoiceConfig
     /// Gets or sets the partial payment options for the invoice.
     /// </summary>
     [JsonPropertyName("partial_payment")]
-    public PartialPayment PartialPayment { get; set; }
+    public PartialPayment? PartialPayment { get; set; }
 
     /// <summary>
     /// Gets or sets the template ID used for the invoice.
@@ -43,5 +43,5 @@ public class InvoiceConfig
     /// </remarks>
     [JsonPropertyName("template_id")]
     [StringLength(30)]
-    public string TemplateId { get; set; }
+    public string? TemplateId { get; set; }
 }

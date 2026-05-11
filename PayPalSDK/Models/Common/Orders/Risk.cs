@@ -18,5 +18,5 @@ public class Risk
     /// which may be used for evaluating potential risks.
     /// </remarks>
     [JsonPropertyName("customer")]
-    public SupplementaryCustomer Customer { get; set; }
+    public SupplementaryCustomer? Customer { get; set; }
 }

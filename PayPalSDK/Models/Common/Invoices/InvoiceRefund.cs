@@ -14,11 +14,11 @@ public class InvoiceRefund
     /// Gets or sets the list of transactions related to the invoice refund.
     /// </summary>
     [JsonPropertyName("transactions")]
-    public List<InvoiceRefundTransaction> Transactions { get; set; }
+    public List<InvoiceRefundTransaction>? Transactions { get; set; }
 
     /// <summary>
     /// Gets or sets the total amount refunded for the invoice.
     /// </summary>
     [JsonPropertyName("refund_amount")]
-    public Money RefundAmount { get; set; }
+    public Money? RefundAmount { get; set; }
 }

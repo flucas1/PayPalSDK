@@ -19,5 +19,5 @@ public class PartialPayment
     /// Gets or sets the minimum amount due for a partial payment.
     /// </summary>
     [JsonPropertyName("minimum_amount_due")]
-    public Money MinimalAmountDue { get; set; }
+    public Money? MinimalAmountDue { get; set; }
 }

@@ -20,25 +20,25 @@ public class Invoicer
     /// </remarks>
     [JsonPropertyName("business_name")]
     [StringLength(300)]
-    public string BusinessName { get; set; }
+    public string? BusinessName { get; set; }
 
     /// <summary>
     /// Gets or sets the name information of the invoicer.
     /// </summary>
     [JsonPropertyName("name")]
-    public NameInfo Name { get; set; }
+    public NameInfo? Name { get; set; }
 
     /// <summary>
     /// Gets or sets the address of the invoicer.
     /// </summary>
     [JsonPropertyName("address")]
-    public Address Address { get; set; }
+    public Address? Address { get; set; }
 
     /// <summary>
     /// Gets or sets the list of phone numbers associated with the invoicer.
     /// </summary>
     [JsonPropertyName("phones")]
-    public List<Phone> Phones { get; set; }
+    public List<Phone>? Phones { get; set; }
 
     /// <summary>
     /// Gets or sets the website URL of the invoicer.
@@ -48,7 +48,7 @@ public class Invoicer
     /// </remarks>
     [JsonPropertyName("website")]
     [StringLength(2048)]
-    public string Website { get; set; }
+    public string? Website { get; set; }
 
     /// <summary>
     /// Gets or sets the tax identification number of the invoicer.
@@ -58,7 +58,7 @@ public class Invoicer
     /// </remarks>
     [JsonPropertyName("tax_id")]
     [StringLength(100)]
-    public string TaxId { get; set; }
+    public string? TaxId { get; set; }
 
     /// <summary>
     /// Gets or sets additional notes for the invoicer.
@@ -68,7 +68,7 @@ public class Invoicer
     /// </remarks>
     [JsonPropertyName("addition_notes")]
     [StringLength(400)]
-    public string AdditionNotes { get; set; }
+    public string? AdditionNotes { get; set; }
 
     /// <summary>
     /// Gets or sets the logo URL of the invoicer.
@@ -78,7 +78,7 @@ public class Invoicer
     /// </remarks>
     [JsonPropertyName("logo_url")]
     [StringLength(2000)]
-    public string LogoUrl { get; set; }
+    public string? LogoUrl { get; set; }
     
     /// <summary>
     /// Gets or sets the email address of the invoicer.
@@ -89,5 +89,5 @@ public class Invoicer
     [JsonPropertyName("email_address")]
     [StringLength(254)]
     [RegularExpression("^(?!\\.)(?:[A-Za-z0-9!#$&'*\\/=?^`{|}~_%+-]|\\.(?!\\.)){1,64}(?<!\\.)@(?:[A-Za-z0-9-]|\\.(?!\\.))+\\.[a-zA-Z]{2,}$")]
-    public string EmailAddress { get; set; }
+    public string? EmailAddress { get; set; }
 }

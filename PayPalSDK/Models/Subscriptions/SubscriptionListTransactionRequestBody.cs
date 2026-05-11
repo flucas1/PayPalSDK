@@ -14,7 +14,7 @@ public class SubscriptionListTransactionRequestBody
     /// Gets or sets the list of transactions associated with the subscription.
     /// </summary>
     [JsonPropertyName("transactions")]
-    public List<Transaction> Transactions { get; set; }
+    public List<Transaction>? Transactions { get; set; }
 
     /// <summary>
     /// Gets or sets the total number of items in the transaction list.
@@ -32,5 +32,5 @@ public class SubscriptionListTransactionRequestBody
     /// Gets or sets the list of links related to the subscription transactions.
     /// </summary>
     [JsonPropertyName("links")]
-    public List<Link> Links { get; set; }
+    public List<Link>? Links { get; set; }
 }

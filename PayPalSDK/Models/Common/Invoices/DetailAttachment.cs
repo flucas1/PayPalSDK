@@ -18,7 +18,7 @@ public class DetailAttachment
     /// </remarks>
     [JsonPropertyName("id")]
     [StringLength(255)]
-    public string Id { get; set; }
+    public string? Id { get; set; }
 
     /// <summary>
     /// Gets or sets the reference URL for the attachment.
@@ -28,19 +28,19 @@ public class DetailAttachment
     /// </remarks>
     [JsonPropertyName("reference_url")]
     [StringLength(2500)]
-    public string ReferenceUrl { get; set; }
+    public string? ReferenceUrl { get; set; }
     
     /// <summary>
     /// Gets or sets the content type of the attachment (e.g., MIME type).
     /// </summary>
     [JsonPropertyName("content_type")]
-    public string ContentType { get; set; }
+    public string? ContentType { get; set; }
 
     /// <summary>
     /// Gets or sets the size of the attachment.
     /// </summary>
     [JsonPropertyName("size")]
-    public string Size { get; set; }
+    public string? Size { get; set; }
 
     /// <summary>
     /// Gets or sets the creation time of the attachment.
@@ -51,5 +51,5 @@ public class DetailAttachment
     [JsonPropertyName("create_time")]
     [StringLength(64)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
-    public string CreateTime { get; set; }
+    public string? CreateTime { get; set; }
 }

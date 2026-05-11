@@ -19,11 +19,11 @@ public class Discount
     /// </remarks>
     [JsonPropertyName("percent")]
     [RegularExpression("^((-?[0-9]+)|(-?([0-9]+)?[.][0-9]+))$")]
-    public string Percent { get; set; }
+    public string? Percent { get; set; }
 
     /// <summary>
     /// Gets or sets the monetary amount of the discount.
     /// </summary>
     [JsonPropertyName("amount")]
-    public Money Amount { get; set; }
+    public Money? Amount { get; set; }
 }

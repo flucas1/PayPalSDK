@@ -12,5 +12,5 @@ public class PaymentReauthorizeRequestBody
     /// The monetary amount to be reauthorized.
     /// </summary>
     [JsonPropertyName("amount")]
-    public Money Amount { get; set; }
+    public Money? Amount { get; set; }
 }

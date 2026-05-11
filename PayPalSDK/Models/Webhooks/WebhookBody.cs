@@ -16,7 +16,7 @@ public class WebhookBody
     /// Gets or sets the unique identifier of the webhook.
     /// </summary>
     [JsonPropertyName("id")]
-    public string Id { get; set; }
+    public string? Id { get; set; }
 
     /// <summary>
     /// Gets or sets the URL associated with the webhook.
@@ -35,5 +35,5 @@ public class WebhookBody
     /// Gets or sets the list of links related to the webhook.
     /// </summary>
     [JsonPropertyName("links")]
-    public List<Link> Links { get; set; }
+    public List<Link>? Links { get; set; }
 }
