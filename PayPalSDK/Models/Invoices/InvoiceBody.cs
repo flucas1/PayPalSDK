@@ -18,44 +18,44 @@ public class InvoiceBody
     /// </summary>
     [JsonPropertyName("id")]
     [StringLength(30)]
-    public string Id { get; set; }
+    public string? Id { get; set; }
 
     /// <summary>
     /// Gets or sets the parent invoice ID, if this invoice is related to another invoice.
     /// </summary>
     [JsonPropertyName("parent_id")]
     [StringLength(30)]
-    public string ParentId { get; set; }
+    public string? ParentId { get; set; }
 
     /// <summary>
     /// Gets or sets the list of primary recipients for the invoice.
     /// </summary>
     [JsonPropertyName("primary_recipients")]
-    public List<Recipient> PrimaryRecipients { get; set; }
+    public List<Recipient>? PrimaryRecipients { get; set; }
 
     /// <summary>
     /// Gets or sets the list of additional recipient email addresses.
     /// </summary>
     [JsonPropertyName("additional_recipients")]
-    public List<string> AdditionalRecipients { get; set; }
+    public List<string>? AdditionalRecipients { get; set; }
 
     /// <summary>
     /// Gets or sets the list of items included in the invoice.
     /// </summary>
     [JsonPropertyName("items")]
-    public List<InvoiceItem> Items { get; set; }
+    public List<InvoiceItem>? Items { get; set; }
 
     /// <summary>
     /// Gets or sets the list of related links for the invoice.
     /// </summary>
     [JsonPropertyName("links")]
-    public List<Link> Links { get; set; }
+    public List<Link>? Links { get; set; }
 
     /// <summary>
     /// Gets or sets the current status of the invoice.
     /// </summary>
     [JsonPropertyName("status")]
-    public string Status { get; set; }
+    public string? Status { get; set; }
 
     /// <summary>
     /// Gets or sets the detailed information for the invoice.
@@ -67,41 +67,41 @@ public class InvoiceBody
     /// Gets or sets the invoicer information for the invoice.
     /// </summary>
     [JsonPropertyName("invoicer")]
-    public Invoicer Invoicer { get; set; }
+    public Invoicer? Invoicer { get; set; }
 
     /// <summary>
     /// Gets or sets the configuration options for the invoice.
     /// </summary>
     [JsonPropertyName("configuration")]
-    public InvoiceConfig Configuration { get; set; }
+    public InvoiceConfig? Configuration { get; set; }
 
     /// <summary>
     /// Gets or sets the total amount breakdown for the invoice.
     /// </summary>
     [JsonPropertyName("amount")]
-    public MoneyBreakdown Amount { get; set; }
+    public MoneyBreakdown? Amount { get; set; }
 
     /// <summary>
     /// Gets or sets the amount due for the invoice.
     /// </summary>
     [JsonPropertyName("due_amount")]
-    public Money DueAmount { get; set; }
+    public Money? DueAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the gratuity (tip) amount for the invoice.
     /// </summary>
     [JsonPropertyName("gratuity")]
-    public Money Gratuity { get; set; }
+    public Money? Gratuity { get; set; }
 
     /// <summary>
     /// Gets or sets the list of payments made towards the invoice.
     /// </summary>
     [JsonPropertyName("payments")]
-    public List<InvoicePayment> Payments { get; set; }
+    public List<InvoicePayment>? Payments { get; set; }
 
     /// <summary>
     /// Gets or sets the list of refunds issued for the invoice.
     /// </summary>
     [JsonPropertyName("refunds")]
-    public List<InvoiceRefund> Refunds { get; set; }
+    public List<InvoiceRefund>? Refunds { get; set; }
 }
