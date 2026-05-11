@@ -31,7 +31,7 @@ public class SubscriptionCreateRequestBody
     /// </remarks>
     [JsonPropertyName("quantity")]
     [StringLength(32)]
-    public string Quantity { get; set; }
+    public string? Quantity { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether the subscription should auto-renew.
@@ -47,7 +47,7 @@ public class SubscriptionCreateRequestBody
     /// </remarks>
     [JsonPropertyName("custom_id")]
     [StringLength(127)]
-    public string CustomId { get; set; }
+    public string? CustomId { get; set; }
 
     /// <summary>
     /// Gets or sets the start time of the subscription.
@@ -58,29 +58,29 @@ public class SubscriptionCreateRequestBody
     [JsonPropertyName("start_time")]
     [StringLength(64)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
-    public string StartTime { get; set; }
+    public string? StartTime { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping amount for the subscription.
     /// </summary>
     [JsonPropertyName("shipping_amount")]
-    public Money ShippingAmount { get; set; }
+    public Money? ShippingAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the subscriber's information.
     /// </summary>
     [JsonPropertyName("subscriber")]
-    public Subscriber Subscriber { get; set; }
+    public Subscriber? Subscriber { get; set; }
 
     /// <summary>
     /// Gets or sets the application context for the subscription.
     /// </summary>
     [JsonPropertyName("application_context")]
-    public ApplicationContext ApplicationContext { get; set; }
+    public ApplicationContext? ApplicationContext { get; set; }
 
     /// <summary>
     /// Gets or sets the subscription plan details.
     /// </summary>
     [JsonPropertyName("plan")]
-    public SubscriberPlan Plan { get; set; }
+    public SubscriberPlan? Plan { get; set; }
 }

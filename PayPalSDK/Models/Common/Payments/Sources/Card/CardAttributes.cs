@@ -17,7 +17,7 @@ public class CardAttributes
     /// This field is optional and represents the customer information.
     /// </remarks>
     [JsonPropertyName("customer")]
-    public Customer Customer { get; set; }
+    public Customer? Customer { get; set; }
 
     /// <summary>
     /// Gets or sets the vault details associated with the card payment source.
@@ -26,7 +26,7 @@ public class CardAttributes
     /// This field is optional and represents the vault information.
     /// </remarks>
     [JsonPropertyName("vault")]
-    public Vault Vault { get; set; }
+    public Vault? Vault { get; set; }
 
     /// <summary>
     /// Gets or sets the verification details associated with the card payment source.
@@ -35,5 +35,5 @@ public class CardAttributes
     /// This field is optional and represents the verification information.
     /// </remarks>
     [JsonPropertyName("verification")]
-    public Verification Verification { get; set; }
+    public Verification? Verification { get; set; }
 }

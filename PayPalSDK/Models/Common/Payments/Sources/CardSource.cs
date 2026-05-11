@@ -20,7 +20,7 @@ public class CardSource
     /// </remarks>
     [JsonPropertyName("name")]
     [StringLength(300)]
-    public string Name { get; set; }
+    public string? Name { get; set; }
 
     /// <summary>
     /// Gets or sets the card number.
@@ -30,7 +30,7 @@ public class CardSource
     /// </remarks>
     [JsonPropertyName("number")]
     [StringLength(19)]
-    public string Number { get; set; }
+    public string? Number { get; set; }
 
     /// <summary>
     /// Gets or sets the card security code (CVV).
@@ -40,7 +40,7 @@ public class CardSource
     /// </remarks>
     [JsonPropertyName("security_code")]
     [StringLength(4)]
-    public string SecurityCode { get; set; }
+    public string? SecurityCode { get; set; }
 
     /// <summary>
     /// Gets or sets the card expiry date in the format YYYY-MM.
@@ -51,7 +51,7 @@ public class CardSource
     [JsonPropertyName("expiry")]
     [StringLength(7)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])$")]
-    public string Expiry { get; set; }
+    public string? Expiry { get; set; }
 
     /// <summary>
     /// Gets or sets the billing address associated with the card.
@@ -60,7 +60,7 @@ public class CardSource
     /// This field is optional and represents the address details for billing.
     /// </remarks>
     [JsonPropertyName("billing_address")]
-    public Address BillingAddress { get; set; }
+    public Address? BillingAddress { get; set; }
 
     /// <summary>
     /// Gets or sets additional attributes for the card source.
@@ -69,7 +69,7 @@ public class CardSource
     /// This field is optional and represents metadata or extra information.
     /// </remarks>
     [JsonPropertyName("attributes")]
-    public CardAttributes Attributes { get; set; }
+    public CardAttributes? Attributes { get; set; }
 
     /// <summary>
     /// Gets or sets stored credentials for the card source.
@@ -78,7 +78,7 @@ public class CardSource
     /// This field is optional and represents saved payment details.
     /// </remarks>
     [JsonPropertyName("stored_credential")]
-    public CardStoredCredentials StoredCredential { get; set; }
+    public CardStoredCredentials? StoredCredential { get; set; }
 
     /// <summary>
     /// Gets or sets the vault ID for the card source.
@@ -89,7 +89,7 @@ public class CardSource
     [JsonPropertyName("vault_id")]
     [StringLength(255)]
     [RegularExpression("^[0-9a-zA-Z_-]+$")]
-    public string VaultId { get; set; }
+    public string? VaultId { get; set; }
 
     /// <summary>
     /// Gets or sets the single-use token for the card source.
@@ -100,7 +100,7 @@ public class CardSource
     [JsonPropertyName("single_use_token")]
     [StringLength(255)]
     [RegularExpression("^[0-9a-zA-Z_-]+$")]
-    public string SingleUseToken { get; set; }
+    public string? SingleUseToken { get; set; }
 
     /// <summary>
     /// Gets or sets the network token for the card source.
@@ -109,5 +109,5 @@ public class CardSource
     /// This field is optional and represents tokenized payment details.
     /// </remarks>
     [JsonPropertyName("network_token")]
-    public NetworkToken NetworkToken { get; set; }
+    public NetworkToken? NetworkToken { get; set; }
 }

@@ -15,14 +15,14 @@ public class InvoiceSendReminderRequestBody
     /// </summary>
     [JsonPropertyName("subject")]
     [StringLength(4000)]
-    public string Subject { get; set; }
+    public string? Subject { get; set; }
 
     /// <summary>
     /// Gets or sets the note to be included in the reminder email.
     /// </summary>
     [JsonPropertyName("note")]
     [StringLength(4000)]
-    public string Note { get; set; }
+    public string? Note { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether the reminder should be sent to the invoicer.
@@ -40,5 +40,5 @@ public class InvoiceSendReminderRequestBody
     /// Gets or sets a list of additional recipients to receive the reminder.
     /// </summary>
     [JsonPropertyName("additional_recipients")]
-    public List<string> AdditionalRecipients { get; set; }
+    public List<string>? AdditionalRecipients { get; set; }
 }

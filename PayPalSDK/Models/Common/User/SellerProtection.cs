@@ -14,11 +14,11 @@ public class SellerProtection
     /// Possible values are defined in <see cref="Tavstal.PayPalSDK.Constants.SellerProtectionStatus"/>.
     /// </summary>
     [JsonPropertyName("status")]
-    public string Status { get; set; }
+    public string? Status { get; set; }
 
     /// <summary>
     /// A list of dispute categories associated with the seller protection.
     /// </summary>
     [JsonPropertyName("dispute_categories")]
-    public List<string> DisputeCategories { get; set; }
+    public List<string>? DisputeCategories { get; set; }
 }

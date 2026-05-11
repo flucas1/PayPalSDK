@@ -22,7 +22,7 @@ public class ReviseRequestBody
     /// </remarks>
     [JsonPropertyName("plan_id")]
     [StringLength(26)]
-    public string PlanId { get; set; }
+    public string? PlanId { get; set; }
 
     /// <summary>
     /// Gets or sets the quantity associated with the subscription.
@@ -32,7 +32,7 @@ public class ReviseRequestBody
     /// </remarks>
     [JsonPropertyName("quantity")]
     [StringLength(36)]
-    public string Quantity { get; set; }
+    public string? Quantity { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping amount for the subscription.
@@ -41,7 +41,7 @@ public class ReviseRequestBody
     /// The shipping amount is represented as a <see cref="Money"/> object.
     /// </remarks>
     [JsonPropertyName("shipping_amount")]
-    public Money ShippingAmount { get; set; }
+    public Money? ShippingAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping address for the subscription.
@@ -50,7 +50,7 @@ public class ReviseRequestBody
     /// The shipping address is represented as a <see cref="Shipping"/> object.
     /// </remarks>
     [JsonPropertyName("shipping_address")]
-    public Shipping ShippingAddress { get; set; }
+    public Shipping? ShippingAddress { get; set; }
 
     /// <summary>
     /// Gets or sets the application context for the subscription.
@@ -59,7 +59,7 @@ public class ReviseRequestBody
     /// The application context provides additional configuration for the subscription.
     /// </remarks>
     [JsonPropertyName("application_context")]
-    public ApplicationContext ApplicationContext { get; set; }
+    public ApplicationContext? ApplicationContext { get; set; }
 
     /// <summary>
     /// Gets or sets the details of the subscription plan.
@@ -68,5 +68,5 @@ public class ReviseRequestBody
     /// The plan is represented as a <see cref="SubscriberPlan"/> object.
     /// </remarks>
     [JsonPropertyName("plan")]
-    public SubscriberPlan Plan { get; set; }
+    public SubscriberPlan? Plan { get; set; }
 }

@@ -18,7 +18,7 @@ public class AppleDecryptedToken
     /// </remarks>
     [JsonPropertyName("device_manufacturer_id")]
     [StringLength(2000)]
-    public string DeviceManufacturerId { get; set; }
+    public string? DeviceManufacturerId { get; set; }
 
     /// <summary>
     /// Gets or sets the type of payment data associated with the decrypted token.
@@ -28,7 +28,7 @@ public class AppleDecryptedToken
     /// </remarks>
     [JsonPropertyName("payment_data_type")]
     [StringLength(16)]
-    public string PaymentDataType { get; set; }
+    public string? PaymentDataType { get; set; }
 
     /// <summary>
     /// Gets or sets the transaction amount associated with the decrypted token.
@@ -37,7 +37,7 @@ public class AppleDecryptedToken
     /// This field is optional and represents the monetary value of the transaction.
     /// </remarks>
     [JsonPropertyName("transaction_amount")]
-    public Money TransactionAmount { get; set; }
+    public Money? TransactionAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the tokenized card associated with the decrypted token.
@@ -55,5 +55,5 @@ public class AppleDecryptedToken
     /// This field is optional and contains additional payment-related information.
     /// </remarks>
     [JsonPropertyName("payment_data")]
-    public PaymentData PaymentData { get; set; }
+    public PaymentData? PaymentData { get; set; }
 }
