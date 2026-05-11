@@ -19,29 +19,29 @@ public class AmountBreakdown
     /// Gets or sets the total item amount in the transaction.
     /// </summary>
     [JsonPropertyName("total_item_amount")]
-    public Money TotalItemAmount { get; set; }
+    public Money? TotalItemAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the fee amount associated with the transaction.
     /// </summary>
     [JsonPropertyName("fee_amount")]
-    public Money FeeAmount { get; set; }
+    public Money? FeeAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping amount for the transaction.
     /// </summary>
     [JsonPropertyName("shipping_amount")]
-    public Money ShippingAmount { get; set; }
+    public Money? ShippingAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the tax amount for the transaction.
     /// </summary>
     [JsonPropertyName("tax_amount")]
-    public Money TaxAmount { get; set; }
+    public Money? TaxAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the net amount of the transaction after deductions.
     /// </summary>
     [JsonPropertyName("net_amount")]
-    public Money NetAmount { get; set; }
+    public Money? NetAmount { get; set; }
 }

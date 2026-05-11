@@ -20,7 +20,7 @@ public class PurchaseUnit
     /// </remarks>
     [JsonPropertyName("reference_id")]
     [StringLength(256)]
-    public string ReferenceId { get; set; }
+    public string? ReferenceId { get; set; }
 
     /// <summary>
     /// Gets or sets the description of the purchase unit.
@@ -30,7 +30,7 @@ public class PurchaseUnit
     /// </remarks>
     [JsonPropertyName("description")]
     [StringLength(127)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     /// <summary>
     /// Gets or sets the custom ID for the purchase unit.
@@ -40,7 +40,7 @@ public class PurchaseUnit
     /// </remarks>
     [JsonPropertyName("custom_id")]
     [StringLength(255)]
-    public string CustomId { get; set; }
+    public string? CustomId { get; set; }
 
     /// <summary>
     /// Gets or sets the invoice ID for the purchase unit.
@@ -50,7 +50,7 @@ public class PurchaseUnit
     /// </remarks>
     [JsonPropertyName("invoice_id")]
     [StringLength(127)]
-    public string InvoiceId { get; set; }
+    public string? InvoiceId { get; set; }
 
     /// <summary>
     /// Gets or sets the soft descriptor for the purchase unit.
@@ -60,7 +60,7 @@ public class PurchaseUnit
     /// </remarks>
     [JsonPropertyName("soft_descriptor")]
     [StringLength(22)]
-    public string SoftDescriptor { get; set; }
+    public string? SoftDescriptor { get; set; }
 
     /// <summary>
     /// Gets or sets the list of items in the purchase unit.
@@ -69,7 +69,7 @@ public class PurchaseUnit
     /// This field is optional and represents the items included in the purchase unit.
     /// </remarks>
     [JsonPropertyName("items")]
-    public List<Item> Items { get; set; }
+    public List<Item>? Items { get; set; }
 
     /// <summary>
     /// Gets or sets the monetary breakdown of the purchase unit.
@@ -87,7 +87,7 @@ public class PurchaseUnit
     /// This field is optional and represents the recipient of the payment.
     /// </remarks>
     [JsonPropertyName("payee")]
-    public Payee Payee { get; set; }
+    public Payee? Payee { get; set; }
 
     /// <summary>
     /// Gets or sets the payment instructions for the purchase unit.
@@ -96,7 +96,7 @@ public class PurchaseUnit
     /// This field is optional and represents specific payment instructions.
     /// </remarks>
     [JsonPropertyName("payment_instruction")]
-    public PaymentInstruction PaymentInstruction { get; set; }
+    public PaymentInstruction? PaymentInstruction { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping information for the purchase unit.
@@ -105,7 +105,7 @@ public class PurchaseUnit
     /// This field is optional and represents the shipping details for the purchase unit.
     /// </remarks>
     [JsonPropertyName("shipping")]
-    public Shipping Shipping { get; set; }
+    public Shipping? Shipping { get; set; }
 
     /// <summary>
     /// Gets or sets the supplementary data for the purchase unit.
@@ -114,7 +114,7 @@ public class PurchaseUnit
     /// This field is optional and represents additional data related to the purchase unit.
     /// </remarks>
     [JsonPropertyName("supplementary_data")]
-    public SupplementaryData SupplementaryData { get; set; }
+    public SupplementaryData? SupplementaryData { get; set; }
     
     /// <summary>
     /// Gets or sets the payments information for the purchase unit.
@@ -123,5 +123,5 @@ public class PurchaseUnit
     /// This field is optional and represents the details of payments associated with the purchase unit.
     /// </remarks>
     [JsonPropertyName("payments")]
-    public PaymentsUnit Payments { get; set; }
+    public PaymentsUnit? Payments { get; set; }
 }

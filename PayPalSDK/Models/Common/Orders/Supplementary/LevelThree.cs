@@ -20,7 +20,7 @@ public class LevelThree
     /// </remarks>
     [JsonPropertyName("ship_from_postal_code")]
     [StringLength(60)]
-    public string ShipFromPostalCode { get; set; }
+    public string? ShipFromPostalCode { get; set; }
 
     /// <summary>
     /// Gets or sets the list of line items included in the transaction.
@@ -29,7 +29,7 @@ public class LevelThree
     /// Each line item represents detailed information about a product or service in the transaction.
     /// </remarks>
     [JsonPropertyName("line_items")]
-    public List<LineItem> LineItems { get; set; }
+    public List<LineItem>? LineItems { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping amount for the transaction.
@@ -38,7 +38,7 @@ public class LevelThree
     /// This property represents the monetary value of the shipping cost.
     /// </remarks>
     [JsonPropertyName("shipping_amount")]
-    public Money ShippingAmount { get; set; }
+    public Money? ShippingAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the duty amount for the transaction.
@@ -47,7 +47,7 @@ public class LevelThree
     /// This property represents the monetary value of any duties applied to the transaction.
     /// </remarks>
     [JsonPropertyName("duty_amount")]
-    public Money DutyAmount { get; set; }
+    public Money? DutyAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the discount amount for the transaction.
@@ -56,7 +56,7 @@ public class LevelThree
     /// This property represents the monetary value of any discounts applied to the transaction.
     /// </remarks>
     [JsonPropertyName("discount_amount")]
-    public Money DiscountAmount { get; set; }
+    public Money? DiscountAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping address for the transaction.
@@ -65,5 +65,5 @@ public class LevelThree
     /// This property contains detailed information about the destination address for the shipment.
     /// </remarks>
     [JsonPropertyName("shipping_address")]
-    public Address ShippingAddress { get; set; }
+    public Address? ShippingAddress { get; set; }
 }

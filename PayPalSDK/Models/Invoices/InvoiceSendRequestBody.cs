@@ -18,7 +18,7 @@ public class InvoiceSendRequestBody
     /// </remarks>
     [JsonPropertyName("subject")]
     [StringLength(4000)]
-    public string Subject { get; set; }
+    public string? Subject { get; set; }
 
     /// <summary>
     /// Gets or sets the note to include in the email sent to recipients.
@@ -28,7 +28,7 @@ public class InvoiceSendRequestBody
     /// </remarks>
     [JsonPropertyName("note")]
     [StringLength(4000)]
-    public string Note { get; set; }
+    public string? Note { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether to send the invoice to the invoicer.
@@ -46,5 +46,5 @@ public class InvoiceSendRequestBody
     /// Gets or sets the list of additional recipient email addresses.
     /// </summary>
     [JsonPropertyName("additional_recipients")]
-    public List<string> AdditionalRecipients { get; set; }
+    public List<string>? AdditionalRecipients { get; set; }
 }

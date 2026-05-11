@@ -35,5 +35,5 @@ public class BanContactSource
     /// <summary>
     /// Gets or sets the experience context for configuring the BanContact payment experience.
     /// </summary>
-    public ExperienceContext ExperienceContext { get; set; }
+    public ExperienceContext? ExperienceContext { get; set; }
 }

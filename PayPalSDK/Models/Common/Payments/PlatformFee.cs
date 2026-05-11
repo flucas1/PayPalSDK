@@ -16,7 +16,7 @@ public class PlatformFee
     /// This field is optional and represents the recipient of the platform fee.
     /// </remarks>
     [JsonPropertyName("payee")]
-    public Payee Payee { get; set; }
+    public Payee? Payee { get; set; }
 
     /// <summary>
     /// Gets or sets the monetary amount of the platform fee.

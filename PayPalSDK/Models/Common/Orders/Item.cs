@@ -40,7 +40,7 @@ public class Item
     /// </remarks>
     [JsonPropertyName("description")]
     [StringLength(2048)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     /// <summary>
     /// Gets or sets the stock keeping unit (SKU) of the item.
@@ -50,7 +50,7 @@ public class Item
     /// </remarks>
     [JsonPropertyName("sku")]
     [StringLength(127)]
-    public string Sku { get; set; }
+    public string? Sku { get; set; }
 
     /// <summary>
     /// Gets or sets the URL of the item.
@@ -60,7 +60,7 @@ public class Item
     /// </remarks>
     [JsonPropertyName("url")]
     [StringLength(2048)]
-    public string Url { get; set; }
+    public string? Url { get; set; }
 
     /// <summary>
     /// Gets or sets the category of the item.
@@ -71,7 +71,7 @@ public class Item
     /// </remarks>
     [JsonPropertyName("category")]
     [StringLength(20)]
-    public string Category { get; set; }
+    public string? Category { get; set; }
 
     /// <summary>
     /// Gets or sets the image URL of the item.
@@ -81,7 +81,7 @@ public class Item
     /// </remarks>
     [JsonPropertyName("image_url")]
     [StringLength(2048)]
-    public string ImageUrl { get; set; }
+    public string? ImageUrl { get; set; }
 
     /// <summary>
     /// Gets or sets the unit amount of the item.
@@ -99,7 +99,7 @@ public class Item
     /// This field is optional and represents the monetary value of the tax.
     /// </remarks>
     [JsonPropertyName("tax")]
-    public Money Tax { get; set; }
+    public Money? Tax { get; set; }
 
     /// <summary>
     /// Gets or sets the Universal Product Code (UPC) of the item.
@@ -108,7 +108,7 @@ public class Item
     /// This field is optional and represents the UPC details.
     /// </remarks>
     [JsonPropertyName("upc")]
-    public UPC UPC { get; set; }
+    public UPC? UPC { get; set; }
 
     /// <summary>
     /// Gets or sets the billing plan associated with the item.
@@ -117,5 +117,5 @@ public class Item
     /// This field is optional and represents the billing plan details.
     /// </remarks>
     [JsonPropertyName("billing_plan")]
-    public BillingPlan BillingPlan { get; set; }
+    public BillingPlan? BillingPlan { get; set; }
 }

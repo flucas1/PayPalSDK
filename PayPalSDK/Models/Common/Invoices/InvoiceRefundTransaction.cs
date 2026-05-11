@@ -19,13 +19,13 @@ public class InvoiceRefundTransaction
     /// </remarks>
     [JsonPropertyName("refund_id")]
     [StringLength(22)]
-    public string RefundId { get; set; }
+    public string? RefundId { get; set; }
 
     /// <summary>
     /// Gets or sets the type of the refund transaction.
     /// </summary>
     [JsonPropertyName("type")]
-    public string Type { get; set; }
+    public string? Type { get; set; }
 
     /// <summary>
     /// Gets or sets the date of the refund transaction.
@@ -36,13 +36,13 @@ public class InvoiceRefundTransaction
     [JsonPropertyName("refund_date")]
     [StringLength(10)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$")]
-    public string RefundDate { get; set; }
+    public string? RefundDate { get; set; }
 
     /// <summary>
     /// Gets or sets the amount refunded in the transaction.
     /// </summary>
     [JsonPropertyName("amount")]
-    public Money Amount { get; set; }
+    public Money? Amount { get; set; }
 
     /// <summary>
     /// Gets or sets the method used for the refund transaction.

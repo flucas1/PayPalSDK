@@ -25,7 +25,7 @@ public class Breakdown
     /// This field is optional and represents the monetary value of shipping.
     /// </remarks>
     [JsonPropertyName("shipping")]
-    public Money Shipping { get; set; }
+    public Money? Shipping { get; set; }
 
     /// <summary>
     /// Gets or sets the handling amount.
@@ -34,7 +34,7 @@ public class Breakdown
     /// This field is optional and represents the monetary value of handling.
     /// </remarks>
     [JsonPropertyName("handling")]
-    public Money Handling { get; set; }
+    public Money? Handling { get; set; }
 
     /// <summary>
     /// Gets or sets the total tax amount.
@@ -43,7 +43,7 @@ public class Breakdown
     /// This field is optional and represents the monetary value of taxes.
     /// </remarks>
     [JsonPropertyName("tax_total")]
-    public Money TaxTotal { get; set; }
+    public Money? TaxTotal { get; set; }
 
     /// <summary>
     /// Gets or sets the insurance amount.
@@ -52,7 +52,7 @@ public class Breakdown
     /// This field is optional and represents the monetary value of insurance.
     /// </remarks>
     [JsonPropertyName("insurance")]
-    public Money Insurance { get; set; }
+    public Money? Insurance { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping discount amount.
@@ -61,7 +61,7 @@ public class Breakdown
     /// This field is optional and represents the monetary value of shipping discounts.
     /// </remarks>
     [JsonPropertyName("shipping_discount")]
-    public Money ShippingDiscount { get; set; }
+    public Money? ShippingDiscount { get; set; }
 
     /// <summary>
     /// Gets or sets the discount amount.
@@ -70,5 +70,5 @@ public class Breakdown
     /// This field is optional and represents the monetary value of discounts.
     /// </remarks>
     [JsonPropertyName("discount")]
-    public Money Discount { get; set; }
+    public Money? Discount { get; set; }
 }

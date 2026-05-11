@@ -13,17 +13,17 @@ public class NetAmountBreakdown
     /// The amount payable in the transaction.
     /// </summary>
     [JsonPropertyName("payable_amount")]
-    public Money PayableAmount { get; set; }
+    public Money? PayableAmount { get; set; }
 
     /// <summary>
     /// The converted amount in the transaction's currency.
     /// </summary>
     [JsonPropertyName("converted_amount")]
-    public Money ConvertedAmount { get; set; }
+    public Money? ConvertedAmount { get; set; }
 
     /// <summary>
     /// The exchange rate details used for the conversion.
     /// </summary>
     [JsonPropertyName("exchange_rate")]
-    public ExchangeRate ExchangeRate { get; set; }
+    public ExchangeRate? ExchangeRate { get; set; }
 }

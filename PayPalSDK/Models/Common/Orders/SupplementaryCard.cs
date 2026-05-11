@@ -18,7 +18,7 @@ public class SupplementaryCard
     /// required for enhanced payment processing.
     /// </remarks>
     [JsonPropertyName("level_2")]
-    public LevelTwo LevelTwo { get; set; }
+    public LevelTwo? LevelTwo { get; set; }
 
     /// <summary>
     /// Gets or sets Level 3 data associated with the card.
@@ -28,5 +28,5 @@ public class SupplementaryCard
     /// often used for business-to-business payments.
     /// </remarks>
     [JsonPropertyName("level_3")]
-    public LevelThree LevelThree { get; set; }
+    public LevelThree? LevelThree { get; set; }
 }

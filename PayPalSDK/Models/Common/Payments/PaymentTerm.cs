@@ -17,7 +17,7 @@ public class PaymentTerm
     /// </para>
     /// </summary>
     [JsonPropertyName("term_type")]
-    public string TermType { get; set; }
+    public string? TermType { get; set; }
 
     /// <summary>
     /// Gets or sets the due date for the payment.
@@ -28,5 +28,5 @@ public class PaymentTerm
     [JsonPropertyName("due_date")]
     [StringLength(10)]
     [RegularExpression(@"^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$")]
-    public string DueDate { get; set; }
+    public string? DueDate { get; set; }
 }

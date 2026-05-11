@@ -40,7 +40,7 @@ public class LineItem
     /// </remarks>
     [JsonPropertyName("description")]
     [StringLength(2048)]
-    public string Description { get; set; }
+    public string? Description { get; set; }
 
     /// <summary>
     /// Gets or sets the stock keeping unit (SKU) of the item.
@@ -50,7 +50,7 @@ public class LineItem
     /// </remarks>
     [JsonPropertyName("sku")]
     [StringLength(127)]
-    public string Sku { get; set; }
+    public string? Sku { get; set; }
 
     /// <summary>
     /// Gets or sets the URL of the item.
@@ -60,7 +60,7 @@ public class LineItem
     /// </remarks>
     [JsonPropertyName("url")]
     [StringLength(2048)]
-    public string Url { get; set; }
+    public string? Url { get; set; }
 
     /// <summary>
     /// Gets or sets the image URL of the item.
@@ -70,7 +70,7 @@ public class LineItem
     /// </remarks>
     [JsonPropertyName("image_url")]
     [StringLength(2048)]
-    public string ImageUrl { get; set; }
+    public string? ImageUrl { get; set; }
 
     /// <summary>
     /// Gets or sets the Universal Product Code (UPC) of the item.
@@ -79,7 +79,7 @@ public class LineItem
     /// The UPC is optional and provides a standardized identifier for the item.
     /// </remarks>
     [JsonPropertyName("upc")]
-    public UPC UPC { get; set; }
+    public UPC? UPC { get; set; }
 
     /// <summary>
     /// Gets or sets the billing plan associated with the item.
@@ -88,7 +88,7 @@ public class LineItem
     /// The billing plan is optional and defines payment terms for the item.
     /// </remarks>
     [JsonPropertyName("billing_plan")]
-    public BillingPlan BillingPlan { get; set; }
+    public BillingPlan? BillingPlan { get; set; }
 
     /// <summary>
     /// Gets or sets the commodity code of the item.
@@ -98,7 +98,7 @@ public class LineItem
     /// </remarks>
     [JsonPropertyName("commidity_code")]
     [StringLength(12)]
-    public string CommodityCode { get; set; }
+    public string? CommodityCode { get; set; }
 
     /// <summary>
     /// Gets or sets the unit of measure for the item.
@@ -108,7 +108,7 @@ public class LineItem
     /// </remarks>
     [JsonPropertyName("unit_of_measure")]
     [StringLength(12)]
-    public string UnitOfMeasure { get; set; }
+    public string? UnitOfMeasure { get; set; }
 
     /// <summary>
     /// Gets or sets the unit amount for the item.
@@ -126,7 +126,7 @@ public class LineItem
     /// The tax amount is optional and represents the monetary value of the tax applied to the item.
     /// </remarks>
     [JsonPropertyName("tax")]
-    public Money Tax { get; set; }
+    public Money? Tax { get; set; }
 
     /// <summary>
     /// Gets or sets the discount amount for the item.
@@ -135,7 +135,7 @@ public class LineItem
     /// The discount amount is optional and represents the monetary value of any discounts applied to the item.
     /// </remarks>
     [JsonPropertyName("discount_amount")]
-    public Money DiscountAmount { get; set; }
+    public Money? DiscountAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the total amount for the item.
@@ -144,5 +144,5 @@ public class LineItem
     /// The total amount is optional and represents the monetary value of the item after applying taxes and discounts.
     /// </remarks>
     [JsonPropertyName("total_amount")]
-    public Money TotalAmount { get; set; }
+    public Money? TotalAmount { get; set; }
 }

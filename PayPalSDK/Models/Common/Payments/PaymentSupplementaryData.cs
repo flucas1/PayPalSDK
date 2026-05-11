@@ -13,5 +13,5 @@ public class PaymentSupplementaryData
     /// Related identifiers for the payment transaction, such as order ID, authorization ID, and capture ID.
     /// </summary>
     [JsonPropertyName("related_ids")]
-    public RelatedIds RelatedIds { get; set; }
+    public RelatedIds? RelatedIds { get; set; }
 }

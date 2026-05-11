@@ -19,7 +19,7 @@ public class LevelTwo
     /// </remarks>
     [JsonPropertyName("invoice_id")]
     [StringLength(127)]
-    public string InvoiceId { get; set; }
+    public string? InvoiceId { get; set; }
 
     /// <summary>
     /// Gets or sets the total tax amount for the transaction.
@@ -28,5 +28,5 @@ public class LevelTwo
     /// This property represents the monetary value of the tax applied to the transaction.
     /// </remarks>
     [JsonPropertyName("tax_total")]
-    public Money TaxTotal { get; set; }
+    public Money? TaxTotal { get; set; }
 }
