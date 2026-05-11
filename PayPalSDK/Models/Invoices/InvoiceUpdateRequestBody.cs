@@ -15,19 +15,19 @@ public class InvoiceUpdateRequestBody
     /// Gets or sets the list of primary recipients for the invoice.
     /// </summary>
     [JsonPropertyName("primary_recipients")]
-    public List<Recipient> PrimaryRecipients { get; set; }
+    public List<Recipient>? PrimaryRecipients { get; set; }
 
     /// <summary>
     /// Gets or sets the list of additional recipients for the invoice.
     /// </summary>
     [JsonPropertyName("additional_recipients")]
-    public List<string> AdditionalRecipients { get; set; }
+    public List<string>? AdditionalRecipients { get; set; }
 
     /// <summary>
     /// Gets or sets the list of items included in the invoice.
     /// </summary>
     [JsonPropertyName("items")]
-    public List<InvoiceItem> Items { get; set; }
+    public List<InvoiceItem>? Items { get; set; }
     
     /// <summary>
     /// Gets or sets the detailed information about the invoice.
@@ -39,17 +39,17 @@ public class InvoiceUpdateRequestBody
     /// Gets or sets the invoicer information for the invoice.
     /// </summary>
     [JsonPropertyName("invoicer")]
-    public Invoicer Invoicer { get; set; }
+    public Invoicer? Invoicer { get; set; }
 
     /// <summary>
     /// Gets or sets the configuration settings for the invoice.
     /// </summary>
     [JsonPropertyName("configuration")]
-    public InvoiceConfig Configuration { get; set; }
+    public InvoiceConfig? Configuration { get; set; }
 
     /// <summary>
     /// Gets or sets the breakdown of the total amount for the invoice.
     /// </summary>
     [JsonPropertyName("amount")]
-    public MoneyBreakdown Amount { get; set; }
+    public MoneyBreakdown? Amount { get; set; }
 }

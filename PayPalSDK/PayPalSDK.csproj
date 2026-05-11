@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <RootNamespace>Tavstal.PayPalSDK</RootNamespace>
         <AssemblyName>Tavstal.PayPalSDK</AssemblyName>
-        <NoWarn>$(NoWarn);CS8618</NoWarn>
+        <NoWarn>$(NoWarn);NU1507</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>

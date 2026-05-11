@@ -22,7 +22,7 @@ public class SubscriptionBody
     /// </remarks>
     [JsonPropertyName("status")]
     [StringLength(24)]
-    public string Status { get; set; }
+    public string? Status { get; set; }
 
     /// <summary>
     /// Gets or sets the note associated with a status change.
@@ -32,7 +32,7 @@ public class SubscriptionBody
     /// </remarks>
     [JsonPropertyName("status_change_note")]
     [StringLength(128)]
-    public string StatusChangeNote { get; set; }
+    public string? StatusChangeNote { get; set; }
 
     /// <summary>
     /// Gets or sets the time when the status was last updated.
@@ -43,7 +43,7 @@ public class SubscriptionBody
     [JsonPropertyName("status_update_time")]
     [StringLength(64)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
-    public string StatusUpdateTime { get; set; }
+    public string? StatusUpdateTime { get; set; }
 
     /// <summary>
     /// Gets or sets the unique identifier of the subscription.
@@ -53,7 +53,7 @@ public class SubscriptionBody
     /// </remarks>
     [JsonPropertyName("id")]
     [StringLength(50)]
-    public string Id { get; set; }
+    public string? Id { get; set; }
 
     /// <summary>
     /// Gets or sets the unique identifier of the subscription plan.
@@ -63,7 +63,7 @@ public class SubscriptionBody
     /// </remarks>
     [JsonPropertyName("plan_id")]
     [StringLength(50)]
-    public string PlanId { get; set; }
+    public string? PlanId { get; set; }
 
     /// <summary>
     /// Gets or sets the quantity of the subscription plan.
@@ -73,7 +73,7 @@ public class SubscriptionBody
     /// </remarks>
     [JsonPropertyName("quantity")]
     [StringLength(32)]
-    public string Quantity { get; set; }
+    public string? Quantity { get; set; }
 
     /// <summary>
     /// Gets or sets a custom identifier for the subscription.
@@ -83,7 +83,7 @@ public class SubscriptionBody
     /// </remarks>
     [JsonPropertyName("custom_id")]
     [StringLength(127)]
-    public string CustomId { get; set; }
+    public string? CustomId { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether the plan has been overridden.
@@ -95,7 +95,7 @@ public class SubscriptionBody
     /// Gets or sets the list of links associated with the subscription.
     /// </summary>
     [JsonPropertyName("links")]
-    public List<Link> Links { get; set; }
+    public List<Link>? Links { get; set; }
 
     /// <summary>
     /// Gets or sets the start time of the subscription.
@@ -106,25 +106,25 @@ public class SubscriptionBody
     [JsonPropertyName("start_time")]
     [StringLength(64)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
-    public string StartTime { get; set; }
+    public string? StartTime { get; set; }
 
     /// <summary>
     /// Gets or sets the shipping amount for the subscription.
     /// </summary>
     [JsonPropertyName("shipping_amount")]
-    public Money ShippingAmount { get; set; }
+    public Money? ShippingAmount { get; set; }
 
     /// <summary>
     /// Gets or sets the subscriber's information.
     /// </summary>
     [JsonPropertyName("subscriber")]
-    public Subscriber Subscriber { get; set; }
+    public Subscriber? Subscriber { get; set; }
 
     /// <summary>
     /// Gets or sets the billing information for the subscription.
     /// </summary>
     [JsonPropertyName("billing_info")]
-    public BillingInfo BillingInfo { get; set; }
+    public BillingInfo? BillingInfo { get; set; }
 
     /// <summary>
     /// Gets or sets the creation time of the subscription.
@@ -135,7 +135,7 @@ public class SubscriptionBody
     [JsonPropertyName("create_time")]
     [StringLength(64)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
-    public string CreateTime { get; set; }
+    public string? CreateTime { get; set; }
 
     /// <summary>
     /// Gets or sets the last update time of the subscription.
@@ -146,11 +146,11 @@ public class SubscriptionBody
     [JsonPropertyName("update_time")]
     [StringLength(64)]
     [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
-    public string UpdateTime { get; set; }
+    public string? UpdateTime { get; set; }
 
     /// <summary>
     /// Gets or sets the details of the subscription plan.
     /// </summary>
     [JsonPropertyName("plan")]
-    public PlanBody Plan { get; set; }
+    public PlanBody? Plan { get; set; }
 }
