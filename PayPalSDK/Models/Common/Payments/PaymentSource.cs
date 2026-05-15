@@ -127,7 +127,7 @@ public class PaymentSource
     /// </remarks>
     [JsonPropertyName("apple_pay")]
     public ApplePaySource? ApplePay { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the Google Pay payment source.
     /// </summary>

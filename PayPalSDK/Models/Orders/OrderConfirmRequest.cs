@@ -15,7 +15,7 @@ public class OrderConfirmRequest : HttpRequestBase<OrderBody>
     /// </summary>
     /// <param name="orderId">The unique identifier of the order to be confirmed.</param>
     /// <param name="body">The request body containing application context and payment source details.</param>
-    public OrderConfirmRequest(string orderId, OrderConfirmRequestBody body) 
+    public OrderConfirmRequest(string orderId, OrderConfirmRequestBody body)
         : base(HttpMethod.Post, $"/v2/checkout/orders/{orderId}/confirm-payment-source")
     {
         Content = JsonContent.Create(body, options: new JsonSerializerOptions

@@ -115,7 +115,7 @@ public class PurchaseUnit
     /// </remarks>
     [JsonPropertyName("supplementary_data")]
     public SupplementaryData? SupplementaryData { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the payments information for the purchase unit.
     /// </summary>

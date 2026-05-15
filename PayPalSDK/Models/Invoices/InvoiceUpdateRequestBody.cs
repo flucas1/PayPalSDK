@@ -28,7 +28,7 @@ public class InvoiceUpdateRequestBody
     /// </summary>
     [JsonPropertyName("items")]
     public List<InvoiceItem>? Items { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the detailed information about the invoice.
     /// </summary>

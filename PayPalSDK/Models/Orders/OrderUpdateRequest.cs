@@ -16,7 +16,7 @@ public class OrderUpdateRequest : HttpRequestBase<OrderBody>
     /// </summary>
     /// <param name="id">The unique identifier of the order to be updated.</param>
     /// <param name="operations">An array of update operations to be applied to the order.</param>
-    public OrderUpdateRequest(string id, UpdateOperation[] operations) 
+    public OrderUpdateRequest(string id, UpdateOperation[] operations)
         : base(HttpMethod.Patch, $"/v2/checkout/orders/{id}")
     {
         Content = JsonContent.Create(operations, options: new JsonSerializerOptions

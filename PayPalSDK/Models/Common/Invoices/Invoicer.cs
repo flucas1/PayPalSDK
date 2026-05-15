@@ -79,7 +79,7 @@ public class Invoicer
     [JsonPropertyName("logo_url")]
     [StringLength(2000)]
     public string? LogoUrl { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the email address of the invoicer.
     /// </summary>

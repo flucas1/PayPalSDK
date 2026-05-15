@@ -33,7 +33,7 @@ public class Subscriber
     [StringLength(13)]
     [RegularExpression("^[2-9A-HJ-NP-Z]{13}$")]
     public string? PayerId { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the name of the subscriber.
     /// </summary>

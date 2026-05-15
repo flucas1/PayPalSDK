@@ -35,7 +35,7 @@ public class InvoiceSendReminderRequestBody
     /// </summary>
     [JsonPropertyName("send_to_recipient")]
     public bool SendToRecipient { get; set; }
-    
+
     /// <summary>
     /// Gets or sets a list of additional recipients to receive the reminder.
     /// </summary>

@@ -29,7 +29,7 @@ public class DetailAttachment
     [JsonPropertyName("reference_url")]
     [StringLength(2500)]
     public string? ReferenceUrl { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the content type of the attachment (e.g., MIME type).
     /// </summary>

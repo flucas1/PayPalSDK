@@ -36,7 +36,7 @@ public class Detail
     /// </summary>
     [JsonPropertyName("terms_and_conditions")]
     public string? TermsAndConditions { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the memo for the invoice.
     /// </summary>

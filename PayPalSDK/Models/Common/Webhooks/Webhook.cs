@@ -20,7 +20,7 @@ public class Webhook
     /// </summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the status of the webhook event.
     /// </summary>

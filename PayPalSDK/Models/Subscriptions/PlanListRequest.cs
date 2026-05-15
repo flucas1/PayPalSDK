@@ -16,7 +16,7 @@ public class PlanListRequest : HttpRequestBase<PlanListBody>
     /// <param name="totalRequired">Indicates whether the total count of items is required in the response. Default is <c>false</c>.</param>
     public PlanListRequest(string? productId = null, int pageSize = 10, int page = 1, bool totalRequired = false)
         : base(
-            HttpMethod.Get, 
+            HttpMethod.Get,
             $"/v1/billing/plans?page_size={pageSize}&page={page}&total_required={totalRequired}{(productId != null ? $"&product_id={productId}" : "")}"
         )
     {

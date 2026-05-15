@@ -21,7 +21,7 @@ public class UPC
     [StringLength(5)]
     [RegularExpression("^[0-9A-Z_-]+$")]
     public required string Type { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the code of the UPC.
     /// </summary>

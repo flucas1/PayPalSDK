@@ -9,7 +9,7 @@ public class ShippingType
     /// The payer intends to receive the items at a specified address.
     /// </summary>
     public const string SHIPPING = "SHIPPING";
-    
+
     /// <summary>
     /// The payer intends to pick up the item(s) from the payee's physical store. Also termed as BOPIS, "Buy Online, Pick-up in Store".
     /// <br/><br/>

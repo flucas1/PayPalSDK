@@ -20,7 +20,7 @@ public class SubscriptionActivateRequest : HttpRequestBase
     /// </remarks>
     public SubscriptionActivateRequest(string id, [StringLength(128)] string reason)
         :
-        base (HttpMethod.Post, $"/v1/billing/subscriptions/{id}/activate")
+        base(HttpMethod.Post, $"/v1/billing/subscriptions/{id}/activate")
     {
         // Sets the content of the HTTP request using the provided reason and JSON serialization options.
         Content = JsonContent.Create(new

@@ -11,7 +11,7 @@ public class OrderGetDetailsRequest : HttpRequestBase<OrderBody>
     /// Initializes a new instance of the <see cref="OrderGetDetailsRequest"/> class.
     /// </summary>
     /// <param name="orderId">The unique identifier of the order whose details are to be retrieved.</param>
-    public OrderGetDetailsRequest(string orderId) 
+    public OrderGetDetailsRequest(string orderId)
         : base(HttpMethod.Get, $"/v2/checkout/orders/{orderId}")
     {
         // No body for GET request

@@ -90,7 +90,7 @@ public class CapturedPaymentBody
     /// </summary>
     [JsonPropertyName("seller_receivable_breakdown")]
     public SellerRecievable? SellerReceivableBreakdown { get; set; }
-    
+
     /// <summary>
     /// Processor response details for the payment transaction.
     /// </summary>

@@ -34,7 +34,7 @@ public class InvoiceSendRequestBody
     /// Gets or sets a value indicating whether to send the invoice to the invoicer.
     /// </summary>
     [JsonPropertyName("send_to_invoicer")]
-    public bool SendToInvoicer { get; set; } 
+    public bool SendToInvoicer { get; set; }
 
     /// <summary>
     /// Gets or sets a value indicating whether to send the invoice to the recipient.

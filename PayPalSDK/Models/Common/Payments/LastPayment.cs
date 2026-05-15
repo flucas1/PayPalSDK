@@ -18,7 +18,7 @@ public class LastPayment
     /// </remarks>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the amount of the last payment.
     /// </summary>

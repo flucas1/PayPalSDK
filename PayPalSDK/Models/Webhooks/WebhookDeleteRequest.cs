@@ -13,7 +13,7 @@ public class WebhookDeleteRequest : HttpRequestBase
     /// <param name="webhookId">The unique identifier of the webhook to delete.</param>
     public WebhookDeleteRequest(string webhookId)
         :
-        base (HttpMethod.Delete, $"/v1/notifications/webhooks/{webhookId}")
+        base(HttpMethod.Delete, $"/v1/notifications/webhooks/{webhookId}")
     {
         // No body is needed for deletion request.
     }

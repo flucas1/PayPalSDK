@@ -47,7 +47,7 @@ public class InvoiceCreateDraftRequestBody
     /// </summary>
     [JsonPropertyName("configuration")]
     public InvoiceConfig? Configuration { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the total amount breakdown for the invoice.
     /// </summary>

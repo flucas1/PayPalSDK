@@ -45,7 +45,7 @@ public class BillingInfo
     /// </remarks>
     [JsonPropertyName("last_payment")]
     public LastPayment? LastPayment { get; set; }
-    
+
     /// <summary>
     /// Gets or sets the time for the next billing cycle.
     /// </summary>

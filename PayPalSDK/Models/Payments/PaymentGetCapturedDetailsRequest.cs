@@ -13,7 +13,7 @@ public class PaymentGetCapturedDetailsRequest : HttpRequestBase<CapturedPaymentB
     /// <param name="captureId">The unique identifier of the captured payment.</param>
     public PaymentGetCapturedDetailsRequest(string captureId)
         :
-        base (HttpMethod.Get, $"/v2/payments/captures/{captureId}")
+        base(HttpMethod.Get, $"/v2/payments/captures/{captureId}")
     {
         // No additional content is needed for a GET request
     }

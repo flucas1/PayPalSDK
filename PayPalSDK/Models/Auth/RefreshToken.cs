@@ -29,7 +29,7 @@ public class RefreshToken
     /// </summary>
     [JsonPropertyName("id_token")]
     public string? IdToken;
-    
+
     /// <summary>
     /// Converts the current <see cref="RefreshToken"/> instance to an <see cref="AccessToken"/> instance.
     /// </summary>
