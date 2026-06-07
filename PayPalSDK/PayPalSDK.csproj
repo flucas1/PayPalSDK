@@ -7,6 +7,10 @@
         <RootNamespace>Tavstal.PayPalSDK</RootNamespace>
         <AssemblyName>Tavstal.PayPalSDK</AssemblyName>
         <NoWarn>$(NoWarn);NU1507</NoWarn>
+		<JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
+		<IsAotCompatible>true</IsAotCompatible>
+		<EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+		<EnableAotAnalyzer>true</EnableAotAnalyzer>
     </PropertyGroup>
 
     <ItemGroup>

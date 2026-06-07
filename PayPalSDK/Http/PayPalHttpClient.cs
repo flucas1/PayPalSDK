@@ -1,6 +1,7 @@
 using System.Net.Http.Headers;
 using Tavstal.PayPalSDK.Config;
 using Tavstal.PayPalSDK.Models.Auth;
+using Tavstal.PayPalSDK.Serialization;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace Tavstal.PayPalSDK.Http;
@@ -75,10 +76,10 @@ public class PayPalHttpClient
 
             // Deserializes the response into an access token or refresh token.
             var json = await response.Content.ReadAsStringAsync();
-            var accessToken = JsonSerializer.Deserialize<AccessToken>(json);
+            var accessToken = JsonSerializer.Deserialize<AccessToken>(json, PayPalSDKSerializerContext.Default.AccessToken);
             if (accessToken == null)
             {
-                var refreshToken = JsonSerializer.Deserialize<RefreshToken>(json);
+                var refreshToken = JsonSerializer.Deserialize<RefreshToken>(json, PayPalSDKSerializerContext.Default.RefreshToken);
                 if (refreshToken != null)
                     return refreshToken.ToAccessToken();
 

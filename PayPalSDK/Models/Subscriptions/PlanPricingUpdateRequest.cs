@@ -3,6 +3,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Http;
 using Tavstal.PayPalSDK.Models.Common.Plans;
+using Tavstal.PayPalSDK.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Subscriptions;
 
@@ -20,9 +21,6 @@ public class PlanPricingUpdateRequest : HttpRequestBase
         : base(HttpMethod.Post, $"/v1/billing/plans/{planId}/update-pricing-schemes")
     {
         // Sets the content of the HTTP request using the provided body and JSON serialization options.
-        Content = JsonContent.Create(body, options: new JsonSerializerOptions
-        {
-            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-        });
+        Content = JsonContent.Create<List<PlanPricingScheme>>(body, PayPalSDKSerializerContext.Default.ListPlanPricingScheme);
     }
 }

@@ -2,6 +2,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Http;
+using Tavstal.PayPalSDK.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Invoices;
 
@@ -22,9 +23,6 @@ public class InvoiceCreateDraftRequest : HttpRequestBase
         : base(HttpMethod.Post, "/v2/invoicing/invoices")
     {
         // Sets the content of the HTTP request using the provided body and JSON serialization options.
-        Content = JsonContent.Create(body, options: new JsonSerializerOptions
-        {
-            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-        });
+        Content = JsonContent.Create<InvoiceCreateDraftRequestBody>(body, PayPalSDKSerializerContext.Default.InvoiceCreateDraftRequestBody);
     }
 }

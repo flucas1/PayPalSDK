@@ -1,4 +1,7 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Json;
+using System.Text.Json.Serialization.Metadata;
+using Tavstal.PayPalSDK.Serialization;
 
 namespace Tavstal.PayPalSDK.Http;
 
@@ -48,6 +51,15 @@ public abstract class HttpRequestBase<T> : HttpRequestBase where T : class
         if (string.IsNullOrEmpty(rawResponse))
             return null;
 
-        return JsonSerializer.Deserialize<T>(rawResponse);
+        JsonTypeInfo? rawTypeInfo = PayPalSDKSerializerContext.Default.GetTypeInfo(typeof(T));
+        JsonTypeInfo<T>? typeInfo = rawTypeInfo as JsonTypeInfo<T>;
+        if (typeInfo != null)
+        {
+            return JsonSerializer.Deserialize<T>(rawResponse, typeInfo);
+        }
+        else
+        {
+            throw new InvalidOperationException($"No JsonTypeInfo found for type {typeof(T).FullName}. Ensure that the type is included in the PayPalSDKSerializerContext.");
+        }
     }
 }

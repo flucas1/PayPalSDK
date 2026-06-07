@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 
@@ -8,6 +9,7 @@ namespace Tavstal.PayPalSDK.Models.Orders;
 /// Represents the request body for authorizing an order within the PayPal SDK.
 /// </summary>
 [DataContract]
+[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties)]
 public class OrderAuthorizeRequestBody
 {
     /// <summary>

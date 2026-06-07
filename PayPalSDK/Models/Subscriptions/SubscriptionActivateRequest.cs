@@ -1,6 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.Net.Http.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Http;
+using Tavstal.PayPalSDK.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Subscriptions;
 
@@ -23,14 +26,11 @@ public class SubscriptionActivateRequest : HttpRequestBase
         base(HttpMethod.Post, $"/v1/billing/subscriptions/{id}/activate")
     {
         // Sets the content of the HTTP request using the provided reason and JSON serialization options.
-        Content = JsonContent.Create(new
+        Content = JsonContent.Create<ProvidedReason>(new ProvidedReason()
             {
-                reason
+                Reason = reason
             },
-            options: new System.Text.Json.JsonSerializerOptions
-            {
-                DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
-            }
+            PayPalSDKSerializerContext.Default.ProvidedReason
         );
     }
 }

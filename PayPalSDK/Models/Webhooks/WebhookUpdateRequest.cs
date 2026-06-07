@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Http;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Common.Webhooks;
+using Tavstal.PayPalSDK.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Webhooks;
 
@@ -22,9 +23,6 @@ public class WebhookUpdateRequest : HttpRequestBase<Webhook>
         base(HttpMethod.Patch, $"/v1/notifications/webhooks/{webhookId}")
     {
         // Sets the content of the HTTP request using the provided body and JSON serialization options.
-        Content = JsonContent.Create(body, options: new JsonSerializerOptions
-        {
-            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-        });
+        Content = JsonContent.Create<List<UpdateOperation>>(body, PayPalSDKSerializerContext.Default.ListUpdateOperation);
     }
 }
