@@ -1,4 +1,3 @@
-using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Common;
@@ -6,7 +5,6 @@ namespace Tavstal.PayPalSDK.Models.Common;
 /// <summary>
 /// Represents a hyperlink object used within the PayPal SDK.
 /// </summary>
-[DataContract]
 public class Link
 {
     /// <summary>

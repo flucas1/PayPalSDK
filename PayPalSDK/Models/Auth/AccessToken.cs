@@ -1,4 +1,3 @@
-using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Models.Auth;
@@ -6,7 +5,6 @@ namespace Tavstal.PayPalSDK.Models.Auth;
 /// <summary>
 /// Represents an access token used for authentication with the PayPal API.
 /// </summary>
-[DataContract]
 public class AccessToken
 {
     /// <summary>

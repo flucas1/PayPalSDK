@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Webhooks;
 
@@ -8,7 +7,6 @@ namespace Tavstal.PayPalSDK.Models.Webhooks;
 /// <summary>
 /// Represents the request body for verifying a webhook signature in the PayPal SDK.
 /// </summary>
-[DataContract]
 public class WebhokVerifyRequestBody
 {
     /// <summary>

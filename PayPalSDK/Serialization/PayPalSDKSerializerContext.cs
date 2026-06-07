@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Auth;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Common.Plans;
@@ -24,7 +22,7 @@ namespace Tavstal.PayPalSDK.Serialization
     [JsonSerializable(typeof(InvoiceSendRequestBody))]
     [JsonSerializable(typeof(InvoiceCreateDraftRequestBody))]
     [JsonSerializable(typeof(InvoiceSendReminderRequestBody))]
-    
+
     [JsonSerializable(typeof(OrderCaptureRequestBody))]
     [JsonSerializable(typeof(OrderCreateRequestBody))]
     [JsonSerializable(typeof(OrderConfirmRequestBody))]
@@ -55,7 +53,6 @@ namespace Tavstal.PayPalSDK.Serialization
     [JsonSerializable(typeof(WebhookCreateRequestBody))]
 
     [JsonSerializable(typeof(WebhokVerifyRequestBody))]
-    
 
     public partial class PayPalSDKSerializerContext : JsonSerializerContext
     {

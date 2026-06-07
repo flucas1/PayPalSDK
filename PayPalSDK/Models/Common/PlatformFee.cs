@@ -1,4 +1,3 @@
-using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 
@@ -7,7 +6,6 @@ namespace Tavstal.PayPalSDK.Models.Common;
 /// <summary>
 /// Represents the platform fee details in a PayPal transaction.
 /// </summary>
-[DataContract]
 public class PlatformFee
 {
     /// <summary>

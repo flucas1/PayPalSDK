@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Addressing;
 
@@ -8,7 +7,6 @@ namespace Tavstal.PayPalSDK.Models.Common;
 /// <summary>
 /// Represents a card used in transactions within the PayPal SDK.
 /// </summary>
-[DataContract]
 public class Card
 {
     /// <summary>
