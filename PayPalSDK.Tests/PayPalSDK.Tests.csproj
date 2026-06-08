@@ -7,6 +7,7 @@
         <Nullable>enable</Nullable>
         <RootNamespace>Tavstal.PayPalSDK.Tests</RootNamespace>
         <AssemblyName>Tavstal.PayPalSDK.Tests</AssemblyName>
+		<JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
     </PropertyGroup>
 
     <ItemGroup>
