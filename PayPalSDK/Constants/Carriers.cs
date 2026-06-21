@@ -5,6 +5,7 @@ namespace Tavstal.PayPalSDK.Constants;
 /// </summary>
 public static class Carriers
 {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public const string DPD_RU = "DPD_RU";
     public const string BG_BULGARIAN_POST = "BG_BULGARIAN_POST";
     public const string KR_KOREA_POST = "KR_KOREA_POST";
@@ -1418,4 +1419,5 @@ public static class Carriers
     public const string SFYDEXPRESS = "SFYDEXPRESS";
     public const string TOPTRANS = "TOPTRANS";
     public const string OTHER = "OTHER";
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }

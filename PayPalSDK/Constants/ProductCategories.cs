@@ -10,6 +10,7 @@ namespace Tavstal.PayPalSDK.Constants;
 [SuppressMessage("ReSharper", "InconsistentNaming")]
 public class ProductCategories
 {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
     public const string AC_REFRIGERATION_REPAIR = "AC_REFRIGERATION_REPAIR";
     public const string ACADEMIC_SOFTWARE = "ACADEMIC_SOFTWARE";
     public const string ACCESSORIES = "ACCESSORIES";
@@ -504,4 +505,5 @@ public class ProductCategories
     public const string WIRE_TRANSFER_AND_MONEY_ORDER = "WIRE_TRANSFER_AND_MONEY_ORDER";
     public const string WOMEN_ACCESSORY_SPECIALITY = "WOMEN_ACCESSORY_SPECIALITY";
     public const string WOMEN_CLOTHING = "WOMEN_CLOTHING";
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 }
