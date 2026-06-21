@@ -22,10 +22,11 @@ public class DisputeAppealRequest : HttpRequestBase<LinksResponseBody>
     /// <param name="body">
     /// The request payload containing the details and rationale for the appeal.
     /// </param>
-    public DisputeAppealRequest([StringLength(255)] string id, DisputeAppealRequestBody body)
+    public DisputeAppealRequest([StringLength(255)] string id, DisputeAppealRequestBody? body = null)
         : base(HttpMethod.Post,  $"/v1/customer/disputes/{id}/appeal")
     {
         // Sets the content of the HTTP request to the serialized JSON representation of the order creation details.
-        Content = JsonContent.Create(body, PayPalSDKJsonContext.Default.DisputeAppealRequestBody);
+        if (body != null)
+            Content = JsonContent.Create(body, PayPalSDKJsonContext.Default.DisputeAppealRequestBody);
     }
 }
