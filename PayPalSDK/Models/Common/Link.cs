@@ -38,6 +38,9 @@ public class Link
     [JsonPropertyName("method")]
     public string? Method { get; set; }
     
+    /// <summary>
+    /// Returns a string representation of the <see cref="Link"/> instance.
+    /// </summary>
     public override string ToString()
     {
         return $"Link: [Href: {Href}, Rel: {Rel}, Method: {Method}]";

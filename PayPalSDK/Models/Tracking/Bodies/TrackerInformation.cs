@@ -33,6 +33,9 @@ public class TrackerInformation
     [StringLength(64)]
     public string? CarrierNameOther { get; set; }
     
+    /// <summary>
+    /// Gets or sets the postage payment identifier associated with the shipment.
+    /// </summary>
     [JsonPropertyName("postage_payment_id")]
     [StringLength(64)]
     public string? PostagePaymentId { get; set; }

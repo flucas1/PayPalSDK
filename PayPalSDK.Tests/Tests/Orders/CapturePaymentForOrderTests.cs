@@ -20,7 +20,7 @@ public class CapturePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().Be("{}");
-        var request = new OrderCaptureRequest("5O190127TN364715T", null!);
+        var request = new OrderCaptureRequest("5O190127TN364715T");
 
         var response = await client.SendAsync(request);
         response.StatusCode.Should().Be(HttpStatusCode.Created);
@@ -42,7 +42,7 @@ public class CapturePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().Be("{}");
-        var request = new OrderCaptureRequest("5O190127TN364715T", null!);
+        var request = new OrderCaptureRequest("5O190127TN364715T");
 
         var response = await client.SendAsync(request);
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -64,7 +64,7 @@ public class CapturePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().Be("{}");
-        var request = new OrderCaptureRequest("5O190127TN364715T", null!);
+        var request = new OrderCaptureRequest("5O190127TN364715T");
 
         var response = await client.SendAsync(request);
         response.StatusCode.Should().Be(HttpStatusCode.Created);
@@ -86,7 +86,7 @@ public class CapturePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().Be("{}");
-        var request = new OrderCaptureRequest("5O190127TN364715T", null!);
+        var request = new OrderCaptureRequest("5O190127TN364715T");
 
         var response = await client.SendAsync(request);
         response.StatusCode.Should().Be(HttpStatusCode.Forbidden);
@@ -104,7 +104,7 @@ public class CapturePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().Be("{}");
-        var request = new OrderCaptureRequest("5O190127TN364715T", null!);
+        var request = new OrderCaptureRequest("5O190127TN364715T");
 
         var response = await client.SendAsync(request);
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
@@ -122,7 +122,7 @@ public class CapturePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().Be("{}");
-        var request = new OrderCaptureRequest("5O190127TN364715T", null!);
+        var request = new OrderCaptureRequest("5O190127TN364715T");
 
         var response = await client.SendAsync(request);
         response.StatusCode.Should().Be(HttpStatusCode.UnprocessableEntity);
@@ -140,7 +140,7 @@ public class CapturePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().Be("{}");
-        var request = new OrderCaptureRequest("5O190127TN364715T", null!);
+        var request = new OrderCaptureRequest("5O190127TN364715T");
 
         var response = await client.SendAsync(request);
         response.StatusCode.Should().Be(HttpStatusCode.UnprocessableEntity);

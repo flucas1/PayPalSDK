@@ -108,11 +108,11 @@ public class PayPalHttpClient
 
             // Deserializes the response into an access token or refresh token.
             var json = await response.Content.ReadAsStringAsync(cancellationToken);
-            var accessToken = JsonSerializer.Deserialize<AccessToken>(json, PayPalSDKJsonContext.Default.AccessToken);
+            var accessToken = JsonSerializer.Deserialize(json, PayPalSDKJsonContext.Default.AccessToken);
             if (accessToken == null)
             {
                 var refreshToken =
-                    JsonSerializer.Deserialize<RefreshToken>(json, PayPalSDKJsonContext.Default.RefreshToken);
+                    JsonSerializer.Deserialize(json, PayPalSDKJsonContext.Default.RefreshToken);
                 if (refreshToken != null)
                     return refreshToken.ToAccessToken();
 
