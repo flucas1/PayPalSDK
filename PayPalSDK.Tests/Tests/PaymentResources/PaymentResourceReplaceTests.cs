@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.PaymentResources;
 using Tavstal.PayPalSDK.Models.PaymentResources.Bodies;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -18,7 +17,7 @@ public class PaymentResourceReplaceTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentResourceReplaceRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentResourceReplaceRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentResourceReplaceRequest("PLB-X7MNK9P2QR8T", body!);

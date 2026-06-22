@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Orders;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -20,7 +19,7 @@ public class UpdateOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNull();
-        List<UpdateOperation>? operations = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        List<UpdateOperation>? operations = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         operations.Should().NotBeNull();
         
         var request = new OrderUpdateRequest("5O190127TN364715T", operations!);
@@ -38,7 +37,7 @@ public class UpdateOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNull();
-        List<UpdateOperation>? operations = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        List<UpdateOperation>? operations = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         operations.Should().NotBeNull();
         
         var request = new OrderUpdateRequest("5O190127TN364715T", operations!);
@@ -56,7 +55,7 @@ public class UpdateOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNull();
-        List<UpdateOperation>? operations = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        List<UpdateOperation>? operations = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         operations.Should().NotBeNull();
         
         var request = new OrderUpdateRequest("5O190127TN364715T", operations!);
@@ -92,7 +91,7 @@ public class UpdateOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNull();
-        List<UpdateOperation>? operations = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        List<UpdateOperation>? operations = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         operations.Should().NotBeNull();
         
         var request = new OrderUpdateRequest("5O190127TN364715T", operations!);

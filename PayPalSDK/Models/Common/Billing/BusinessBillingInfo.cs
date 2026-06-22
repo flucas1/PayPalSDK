@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Addressing;
@@ -12,7 +11,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Billing;
 /// Represents the billing information for a business.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class BusinessBillingInfo
 {
     /// <summary>

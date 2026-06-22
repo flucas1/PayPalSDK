@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Billing;
@@ -12,7 +11,6 @@ namespace Tavstal.PayPalSDK.Models.Subscriptions.Plan.Bodies;
 /// Represents the request body for creating a subscription plan in the PayPal SDK.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class SubscriptionPlanCreateRequestBody
 {
     /// <summary>

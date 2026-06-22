@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Invoices;
 using Tavstal.PayPalSDK.Models.Invoices.Bodies;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -19,14 +18,14 @@ public class InvoiceCreateDraftTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<InvoiceCreateDraftRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<InvoiceCreateDraftRequestBody>();
         body.Should().NotBeNull();
         
         var request = new InvoiceCreateDraftRequest(body!);
 
         var response = await client.SendAsync(request);
         response.StatusCode.Should().Be(HttpStatusCode.Created);
-        var objectResponse = await response.Content.ReadJsonAsync<InvoiceBody>();
+        var objectResponse = await request.GetResponseBodyAsync(response);
         objectResponse.Should().NotBeNull();
         
         _testOutputHelper.WriteLine("ID: " + objectResponse!.Id);

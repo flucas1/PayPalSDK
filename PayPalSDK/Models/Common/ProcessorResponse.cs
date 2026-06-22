@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
@@ -8,7 +7,6 @@ namespace Tavstal.PayPalSDK.Models.Common;
 /// Represents the processor response details for a payment transaction.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class ProcessorResponse
 {
     /// <summary>

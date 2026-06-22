@@ -1,4 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
@@ -12,7 +12,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Orders;
 /// Represents the details of a payment authorization, including its status, amount, and related metadata.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class PaymentAuthorization
 {
     /// <summary>
@@ -91,6 +90,8 @@ public class PaymentAuthorization
     /// The time is represented as an ISO 8601 string.
     /// </remarks>
     [JsonPropertyName("expiration_time")]
+    [StringLength(64)]
+    [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
     public string? ExpirationTime { get; set; }
 
     /// <summary>
@@ -100,6 +101,8 @@ public class PaymentAuthorization
     /// The time is represented as an ISO 8601 string.
     /// </remarks>
     [JsonPropertyName("create_time")]
+    [StringLength(64)]
+    [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
     public string? CreateTime { get; set; }
 
     /// <summary>
@@ -109,6 +112,8 @@ public class PaymentAuthorization
     /// The time is represented as an ISO 8601 string.
     /// </remarks>
     [JsonPropertyName("update_time")]
+    [StringLength(64)]
+    [RegularExpression("^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])[T,t]([0-1][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)([.][0-9]+)?([Zz]|[+-][0-9]{2}:[0-9]{2})$")]
     public string? UpdateTime { get; set; }
 
     /// <summary>

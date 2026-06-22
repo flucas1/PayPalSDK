@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Billing;
@@ -11,7 +10,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Orders.Supplementary;
 /// Represents a line item in a PayPal order.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class LineItem
 {
     /// <summary>

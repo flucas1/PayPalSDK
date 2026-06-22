@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
@@ -10,7 +9,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Billing;
 /// Represents the billing information associated with a subscription or payment plan.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class BillingInfo
 {
     /// <summary>

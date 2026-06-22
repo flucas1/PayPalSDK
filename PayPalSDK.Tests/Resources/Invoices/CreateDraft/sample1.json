@@ -371,10 +371,10 @@
         "tax": {
           "name": "Sales Tax",
           "percent": "7.25",
+          "tax_note": "Reduced tax rate",
           "amount": {
             "currency_code": "USD",
-            "value": "3.27",
-            "tax_note": "Reduced tax rate"
+            "value": "3.27"
           }
         },
         "discount": {
@@ -396,10 +396,10 @@
         "tax": {
           "name": "Sales Tax",
           "percent": "7.25",
+          "tax_note": "Reduced tax rate",
           "amount": {
             "currency_code": "USD",
-            "value": "0.34",
-            "tax_note": "Reduced tax rate"
+            "value": "0.34"
           }
         },
         "discount": {
@@ -452,10 +452,10 @@
           "tax": {
             "name": "Sales Tax",
             "percent": "7.25",
+            "tax_note": "Reduced tax rate",
             "amount": {
               "currency_code": "USD",
-              "value": "0.73",
-              "tax_note": "Reduced tax rate"
+              "value": "0.73"
             }
           }
         },

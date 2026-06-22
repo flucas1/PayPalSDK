@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
@@ -10,7 +9,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Plans;
 /// Represents the pricing scheme configuration for a subscription plan.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class PlanPricingSchemeData
 {
     /// <summary>

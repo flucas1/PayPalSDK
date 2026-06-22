@@ -31,11 +31,11 @@ public class AccessToken
     /// Gets the date and time when the access token was created.
     /// </summary>
     [JsonIgnore] 
-    public DateTime CreatedAt { get; } = DateTime.Now;
+    public DateTime CreatedAt { get; } = DateTime.UtcNow;
 
     /// <summary>
     /// Determines whether the access token has expired.
     /// </summary>
     /// <returns><c>true</c> if the token has expired; otherwise, <c>false</c>.</returns>
-    public bool IsExpired() => DateTime.Now >= CreatedAt.AddSeconds(ExpiresIn);
+    public bool IsExpired() => DateTime.UtcNow >= CreatedAt.AddSeconds(ExpiresIn);
 }

@@ -68,7 +68,7 @@ public class Dispute
     /// Gets or sets the monetary amount currently in dispute.
     /// </summary>
     [JsonPropertyName("dispute_amount")]
-    public Money? Money { get; set; }
+    public Money? DisputeAmount { get; set; }
     
     /// <summary>
     /// Gets or sets asset-level details associated with the disputed amount.

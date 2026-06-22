@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Orders;
 using Tavstal.PayPalSDK.Models.Orders.Bodies;
@@ -21,7 +20,7 @@ public class CreateOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        OrderCreateRequestBody? body = JsonConvert.DeserializeObject<OrderCreateRequestBody>(resource.JsonRequest!);
+        OrderCreateRequestBody? body = resource.JsonRequest!.DeserializeJson<OrderCreateRequestBody>();
         body.Should().NotBeNull(); 
         var request = new OrderCreateRequest(body!);
 
@@ -45,7 +44,7 @@ public class CreateOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        OrderCreateRequestBody? body = JsonConvert.DeserializeObject<OrderCreateRequestBody>(resource.JsonRequest!);
+        OrderCreateRequestBody? body = resource.JsonRequest!.DeserializeJson<OrderCreateRequestBody>();
         body.Should().NotBeNull(); 
         var request = new OrderCreateRequest(body!);
 
@@ -69,7 +68,7 @@ public class CreateOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        OrderCreateRequestBody? body = JsonConvert.DeserializeObject<OrderCreateRequestBody>(resource.JsonRequest!);
+        OrderCreateRequestBody? body = resource.JsonRequest!.DeserializeJson<OrderCreateRequestBody>();
         body.Should().NotBeNull(); 
         var request = new OrderCreateRequest(body!);
 
@@ -93,7 +92,7 @@ public class CreateOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        OrderCreateRequestBody? body = JsonConvert.DeserializeObject<OrderCreateRequestBody>(resource.JsonRequest!);
+        OrderCreateRequestBody? body = resource.JsonRequest!.DeserializeJson<OrderCreateRequestBody>();
         body.Should().NotBeNull(); 
         var request = new OrderCreateRequest(body!);
 
@@ -116,8 +115,10 @@ public class CreateOrderTests : TestBase
         var resource = _resources[4];
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
-        resource.JsonRequest.Should().Be("{}");
-        var request = new OrderCreateRequest(null!);
+        resource.JsonRequest.Should().NotBeNullOrEmpty();
+        OrderCreateRequestBody? body = resource.JsonRequest!.DeserializeJson<OrderCreateRequestBody>();
+        body.Should().NotBeNull(); 
+        var request = new OrderCreateRequest(body!);
 
         var response = await client.SendAsync(request);
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
@@ -139,7 +140,7 @@ public class CreateOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        OrderCreateRequestBody? body = JsonConvert.DeserializeObject<OrderCreateRequestBody>(resource.JsonRequest!);
+        OrderCreateRequestBody? body = resource.JsonRequest!.DeserializeJson<OrderCreateRequestBody>();
         body.Should().NotBeNull(); 
         var request = new OrderCreateRequest(body!);
 

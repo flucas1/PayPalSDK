@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common.Plans;
 using Tavstal.PayPalSDK.Models.Subscriptions.Plan;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -18,7 +17,7 @@ public class SubscriptionPlanPricingTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<List<PlanPricingScheme>>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<List<PlanPricingScheme>>();
         body.Should().NotBeNull();
         
         var request = new SubscriptionPlanPricingUpdateRequest("P-7GL4271244454362WXNWU5NQ", body!);

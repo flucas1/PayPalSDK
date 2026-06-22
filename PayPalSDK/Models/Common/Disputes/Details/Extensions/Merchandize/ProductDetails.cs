@@ -62,7 +62,7 @@ public class ProductDetails
     /// <summary>
     /// Gets the time when the product was received as a <see cref="DateTime"/> object, if valid.
     /// </summary>
-    public DateTime? ProducRecievedTimeAsDateTime => DateTimeHelper.FromISO8601(ProductReceivedTime);
+    public DateTime? ProductReceivedTimeAsDateTime => DateTimeHelper.FromISO8601(ProductReceivedTime);
     
     /// <summary>
     /// Gets the expected delivery date as a <see cref="DateTime"/> object, if valid.

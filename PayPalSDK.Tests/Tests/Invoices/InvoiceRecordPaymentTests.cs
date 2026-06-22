@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Invoices;
 using Tavstal.PayPalSDK.Models.Invoices.Bodies;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -19,7 +18,7 @@ public class InvoiceRecordPaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<InvoiceRecordPaymentRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<InvoiceRecordPaymentRequestBody>();
         body.Should().NotBeNull();
         
         var request = new InvoiceRecordPaymentRequest("INV2-Z56S-5LLA-Q52L-CPZ5", body!);

@@ -2,9 +2,9 @@
   "endpoint": "v2/checkout/orders/5O190127TN364715T/track",
   "statusCode": 422,
   "request": {
-    "name": "NOT_AUTHORIZED",
-    "debug_id": "b1d1f06c7246c",
-    "message": "Authorization failed due to insufficient permissions."
+    "capture_id": "8MC585209K746392H",
+    "tracking_number": "443844607820",
+    "carrier": "GLS"
   },
   "response": {
     "name": "UNPROCESSABLE_ENTITY",

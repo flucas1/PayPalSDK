@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Tavstal.PayPalSDK.Http;
-using Tavstal.PayPalSDK.Models.PaymentMethodTokens.Bodies;
+using Tavstal.PayPalSDK.Models.Common.PaymentMethodTokens;
 
 namespace Tavstal.PayPalSDK.Models.PaymentMethodTokens;
 

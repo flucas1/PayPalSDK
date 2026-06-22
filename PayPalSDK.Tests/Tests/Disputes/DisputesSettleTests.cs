@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Disputes;
 using Tavstal.PayPalSDK.Models.Disputes.Bodies;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -18,7 +17,7 @@ public class DisputesSettleTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<DisputeSettleRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<DisputeSettleRequestBody>();
         body.Should().NotBeNull();
         
 #pragma warning disable CS0618 // Type or member is obsolete

@@ -1,18 +1,18 @@
 using System.Net;
 using System.Runtime.Serialization;
 using System.Text;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace Tavstal.PayPalSDK.Tests.Models;
 
 [DataContract]
 public class Resource
 {
-    [JsonProperty("endpoint")]
+    [JsonPropertyName("endpoint")]
     public required string Endpoint { get; set; }
     
-    [JsonProperty("statusCode")]
+    [JsonPropertyName("statusCode")]
     public required int StatusCode { get; set; }
     
     [JsonIgnore]
@@ -23,7 +23,7 @@ public class Resource
     
     public HttpResponseMessage Responder(HttpRequestMessage request)
     {
-        var path = request.RequestUri?.PathAndQuery.TrimStart('/') ?? string.Empty;
+        var path = request.RequestUri?.OriginalString.TrimStart('/') ?? string.Empty;
         
         if (path.Contains(AuthResource.Endpoint))
         {
@@ -46,13 +46,14 @@ public class Resource
     public static Resource FromFile(string path)
     {
         string json = File.ReadAllText(path);
-        JObject jobject = JObject.Parse(json);
+        using var doc = JsonDocument.Parse(json);
+        var root = doc.RootElement;
         return new Resource
         {
-            Endpoint = jobject["endpoint"]?.ToString() ?? throw new InvalidOperationException("Resource JSON must contain an 'endpoint' property"),
-            StatusCode = jobject["statusCode"]?.ToObject<int>() ?? throw new InvalidOperationException("Resource JSON must contain a 'statusCode' property"),
-            JsonRequest = jobject["request"]?.ToString(),
-            JsonResponse = jobject["response"]?.ToString() ?? throw new InvalidOperationException("Resource JSON must contain a 'response' property")
+            Endpoint = root.GetProperty("endpoint").GetString() ?? throw new InvalidOperationException("Resource JSON must contain an 'endpoint' property"),
+            StatusCode = root.GetProperty("statusCode").GetInt32(),
+            JsonRequest = root.TryGetProperty("request", out var req) ? req.GetRawText() : null,
+            JsonResponse = root.TryGetProperty("response", out var res) ? res.GetRawText() : throw new InvalidOperationException("Resource JSON must contain a 'response' property")
         };
     }
     

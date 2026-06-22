@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Webhooks;
 using Tavstal.PayPalSDK.Models.Webhooks.Bodies;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -18,7 +17,7 @@ public class WebhooksVerifyTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<WebhookVerifyRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<WebhookVerifyRequestBody>();
         body.Should().NotBeNull();
         
         var request = new WebhookVerifyRequest(body!);

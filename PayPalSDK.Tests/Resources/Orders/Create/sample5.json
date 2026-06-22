@@ -1,7 +1,10 @@
 {
   "endpoint": "v2/checkout/orders",
   "statusCode": 400,
-  "request": {},
+  "request": {
+    "intent": "CAPTURE",
+    "purchase_units": [] 
+  },
   "response": {
     "name": "INVALID_REQUEST",
     "message": "Request is not well-formed, syntactically incorrect, or violates schema.",

@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Orders;
 using Tavstal.PayPalSDK.Models.Orders.Bodies;
@@ -21,7 +20,7 @@ public class AuthorizePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderAuthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderAuthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAuthorizeRequest("5O190127TN364715T", body!);
@@ -46,7 +45,7 @@ public class AuthorizePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderAuthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderAuthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAuthorizeRequest("5O190127TN364715T", body!);
@@ -71,7 +70,7 @@ public class AuthorizePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderAuthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderAuthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAuthorizeRequest("5O190127TN364715T", body!);
@@ -96,7 +95,7 @@ public class AuthorizePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderAuthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderAuthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAuthorizeRequest("5O190127TN364715T", body!);
@@ -117,7 +116,7 @@ public class AuthorizePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderAuthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderAuthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAuthorizeRequest("5O190127TN364715T", body!);
@@ -142,7 +141,7 @@ public class AuthorizePaymentForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderAuthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderAuthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAuthorizeRequest("5O190127TN364715T", body!);

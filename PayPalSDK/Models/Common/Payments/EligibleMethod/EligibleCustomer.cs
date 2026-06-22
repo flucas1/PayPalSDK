@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Addressing;
@@ -10,7 +9,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Payments.EligibleMethod;
 /// Represents a customer who may be eligible for a payment method.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class EligibleCustomer
 {
     /// <summary>

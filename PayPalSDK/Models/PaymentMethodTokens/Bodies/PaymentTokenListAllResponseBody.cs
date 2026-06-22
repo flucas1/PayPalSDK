@@ -1,6 +1,7 @@
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
+using Tavstal.PayPalSDK.Models.Common.PaymentMethodTokens;
 using Tavstal.PayPalSDK.Models.Common.User;
 
 namespace Tavstal.PayPalSDK.Models.PaymentMethodTokens.Bodies;
@@ -9,7 +10,6 @@ namespace Tavstal.PayPalSDK.Models.PaymentMethodTokens.Bodies;
 /// Represents the response body returned when listing payment tokens for a customer.
 /// </summary>
 [DataContract]
-// ReSharper disable once ClassNeverInstantiated.Global
 public class PaymentTokenListAllResponseBody
 {
     /// <summary>

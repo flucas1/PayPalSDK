@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.CurrencyExchange;
 using Tavstal.PayPalSDK.Models.CurrencyExchange.Bodies;
@@ -21,7 +20,7 @@ public class CurrencyExchangeCreateTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<CurrencyExchangeCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<CurrencyExchangeCreateRequestBody>();
         body.Should().NotBeNull();
 
         var request = new CurrencyExchangeCreateRequest(body!);
@@ -41,7 +40,7 @@ public class CurrencyExchangeCreateTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<CurrencyExchangeCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<CurrencyExchangeCreateRequestBody>();
         body.Should().NotBeNull();
 
         var request = new CurrencyExchangeCreateRequest(body!);
@@ -62,7 +61,7 @@ public class CurrencyExchangeCreateTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<CurrencyExchangeCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<CurrencyExchangeCreateRequestBody>();
         body.Should().NotBeNull();
 
         var request = new CurrencyExchangeCreateRequest(body!);
@@ -83,7 +82,7 @@ public class CurrencyExchangeCreateTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<CurrencyExchangeCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<CurrencyExchangeCreateRequestBody>();
         body.Should().NotBeNull();
 
         var request = new CurrencyExchangeCreateRequest(body!);

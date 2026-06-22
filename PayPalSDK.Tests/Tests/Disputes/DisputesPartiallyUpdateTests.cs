@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Disputes;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -18,7 +17,7 @@ public class DisputesPartiallyUpdateTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         body.Should().NotBeNull();
         
         var request = new DisputePartiallyUpdateRequest("PP-D-27803", body!);

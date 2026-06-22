@@ -21,7 +21,7 @@ public class IncorrectTransactionAmount
     /// <summary>
     /// Gets or sets the correct transaction asset for the dispute.
     /// </summary>
-    [JsonPropertyName("corrent_transaction_asset")]
+    [JsonPropertyName("correct_transaction_asset")]
     public Asset? CorrentTransactionAsset { get; set; }
     
     /// <summary>

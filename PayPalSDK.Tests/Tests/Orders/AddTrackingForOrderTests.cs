@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Orders;
 using Tavstal.PayPalSDK.Models.Orders.Bodies;
@@ -21,7 +20,7 @@ public class AddTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderTrackingRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderTrackingRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAddTrackingRequest("5O190127TN364715T", body!);
@@ -46,7 +45,7 @@ public class AddTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderTrackingRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderTrackingRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAddTrackingRequest("5O190127TN364715T", body!);
@@ -71,7 +70,7 @@ public class AddTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderTrackingRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderTrackingRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAddTrackingRequest("5O190127TN364715T", body!);
@@ -92,7 +91,7 @@ public class AddTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderTrackingRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderTrackingRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAddTrackingRequest("5O190127TN364715T", body!);
@@ -113,7 +112,7 @@ public class AddTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderTrackingRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderTrackingRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAddTrackingRequest("5O190127TN364715T", body!);
@@ -134,7 +133,7 @@ public class AddTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderTrackingRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderTrackingRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderAddTrackingRequest("5O190127TN364715T", body!);

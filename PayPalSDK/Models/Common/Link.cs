@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
@@ -8,7 +7,6 @@ namespace Tavstal.PayPalSDK.Models.Common;
 /// Represents a hyperlink object used within the PayPal SDK.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class Link
 {
     /// <summary>

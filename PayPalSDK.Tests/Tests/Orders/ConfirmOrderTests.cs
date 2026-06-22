@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Orders;
 using Tavstal.PayPalSDK.Models.Orders.Bodies;
@@ -21,7 +20,7 @@ public class ConfirmOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderConfirmRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderConfirmRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderConfirmRequest("5O190127TN364715T", body!);
@@ -82,7 +81,7 @@ public class ConfirmOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderConfirmRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderConfirmRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderConfirmRequest("5O190127TN364715T", body!);
@@ -100,7 +99,7 @@ public class ConfirmOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<OrderConfirmRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<OrderConfirmRequestBody>();
         body.Should().NotBeNull();
         
         var request = new OrderConfirmRequest("5O190127TN364715T", body!);

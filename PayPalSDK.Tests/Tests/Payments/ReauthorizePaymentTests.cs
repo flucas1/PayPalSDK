@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Payments;
 using Tavstal.PayPalSDK.Models.Payments.Bodies;
@@ -22,7 +21,7 @@ public class ReauthorizePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentReauthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentReauthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentReauthorizeRequest("8AA831015G517922L", body!);
@@ -47,7 +46,7 @@ public class ReauthorizePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentReauthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentReauthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentReauthorizeRequest("8AA831015G517922L", body!);
@@ -72,7 +71,7 @@ public class ReauthorizePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentReauthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentReauthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentReauthorizeRequest("8AA831015G517922L", body!);
@@ -93,7 +92,7 @@ public class ReauthorizePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentReauthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentReauthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentReauthorizeRequest("8AA831015G517922L", body!);
@@ -114,7 +113,7 @@ public class ReauthorizePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentReauthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentReauthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentReauthorizeRequest("8AA831015G517922L", body!);
@@ -135,7 +134,7 @@ public class ReauthorizePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentReauthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentReauthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentReauthorizeRequest("8AA831015G517922L", body!);
@@ -156,7 +155,7 @@ public class ReauthorizePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentReauthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentReauthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentReauthorizeRequest("8AA831015G517922L", body!);
@@ -177,7 +176,7 @@ public class ReauthorizePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentReauthorizeRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentReauthorizeRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentReauthorizeRequest("8AA831015G517922L", body!);

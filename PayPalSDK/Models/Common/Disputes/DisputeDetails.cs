@@ -37,7 +37,7 @@ public class DisputeDetails
     /// Gets or sets adjudication records created during dispute processing.
     /// </summary>
     [JsonPropertyName("adjudications")]
-    public List<DisputeAdjucation>? Adjudications { get; set; }
+    public List<DisputeAdjudication>? Adjudications { get; set; }
     
     /// <summary>
     /// Gets or sets fund movement records related to the dispute.

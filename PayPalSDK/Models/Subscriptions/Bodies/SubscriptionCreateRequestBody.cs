@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
@@ -13,7 +12,6 @@ namespace Tavstal.PayPalSDK.Models.Subscriptions.Bodies;
 /// Represents the request body for creating a subscription.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class SubscriptionCreateRequestBody
 {
     /// <summary>
@@ -24,7 +22,7 @@ public class SubscriptionCreateRequestBody
     /// </remarks>
     [JsonPropertyName("plan_id")]
     [StringLength(26)]
-    public required string PlanId { get; set; }
+    public string? PlanId { get; set; }
 
     /// <summary>
     /// Gets or sets the quantity of the subscription plan.

@@ -14,7 +14,7 @@ public class DisputeProvideSupportRequestBody
     /// Gets or sets the note content to be provided as support in the dispute.
     /// This property is required and has a maximum length of 2000 characters.
     /// </summary>
-    [JsonPropertyName("note")]
+    [JsonPropertyName("notes")]
     [StringLength(2000)]
-    public required string Note { get; set; }
+    public required string Notes { get; set; }
 }

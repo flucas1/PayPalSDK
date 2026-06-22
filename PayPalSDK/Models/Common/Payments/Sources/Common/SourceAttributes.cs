@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments.Sources.Card;
@@ -10,7 +9,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Payments.Sources.Common;
 /// Represents the attributes of a card payment source in the PayPal SDK.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class SourceAttributes
 {
     /// <summary>

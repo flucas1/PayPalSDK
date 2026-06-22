@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Utils;
@@ -10,7 +9,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Payments;
 /// Represents the details of a failed payment.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class FailedPayment
 {
     /// <summary>

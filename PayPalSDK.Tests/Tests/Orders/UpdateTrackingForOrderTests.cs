@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Orders;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -21,7 +20,7 @@ public class UpdateTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         body.Should().NotBeNull();
         
         var request = new OrderUpdateTrackingRequest("5O190127TN364715T", "8MC585209K746392H443844607820", body!);
@@ -39,7 +38,7 @@ public class UpdateTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         body.Should().NotBeNull();
         
         var request = new OrderUpdateTrackingRequest("5O190127TN364715T", "8MC585209K746392H443844607820", body!);
@@ -75,7 +74,7 @@ public class UpdateTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         body.Should().NotBeNull();
         
         var request = new OrderUpdateTrackingRequest("5O190127TN364715T", "8MC585209K746392H443844607820", body!);
@@ -96,7 +95,7 @@ public class UpdateTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         body.Should().NotBeNull();
         
         var request = new OrderUpdateTrackingRequest("5O190127TN364715T", "8MC585209K746392H443844607820", body!);
@@ -117,7 +116,7 @@ public class UpdateTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         body.Should().NotBeNull();
         
         var request = new OrderUpdateTrackingRequest("5O190127TN364715T", "8MC585209K746392H443844607820", body!);
@@ -138,7 +137,7 @@ public class UpdateTrackingForOrderTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<List<UpdateOperation>>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<List<UpdateOperation>>();
         body.Should().NotBeNull();
         
         var request = new OrderUpdateTrackingRequest("5O190127TN364715T", "8MC585209K746392H443844607820", body!);

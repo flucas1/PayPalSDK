@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
@@ -11,7 +10,6 @@ namespace Tavstal.PayPalSDK.Models.ProductCatalog.Bodies;
 /// Represents an element in the product list.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class ProductListElement
 {
     /// <summary>

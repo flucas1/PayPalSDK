@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Payments;
@@ -9,7 +8,6 @@ namespace Tavstal.PayPalSDK.Models.Common.User;
 /// Represents the details of the seller's payable amounts in a transaction.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class SellerPayable
 {
     /// <summary>

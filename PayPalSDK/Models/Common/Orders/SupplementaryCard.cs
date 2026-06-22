@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Orders.Supplementary;
@@ -9,7 +8,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Orders;
 /// Represents supplementary card information for a PayPal order.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class SupplementaryCard
 {
     /// <summary>

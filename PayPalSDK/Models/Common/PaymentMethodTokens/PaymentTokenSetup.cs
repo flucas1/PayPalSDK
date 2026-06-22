@@ -1,11 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
-using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Common.Payments;
 using Tavstal.PayPalSDK.Models.Common.User;
 
-namespace Tavstal.PayPalSDK.Models.PaymentMethodTokens.Bodies;
+namespace Tavstal.PayPalSDK.Models.Common.PaymentMethodTokens;
 
 /// <summary>
 /// Represents a payment token setup returned by the Payment Method Tokens API.

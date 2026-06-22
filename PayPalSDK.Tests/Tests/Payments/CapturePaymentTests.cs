@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Payments;
 using Tavstal.PayPalSDK.Models.Payments.Bodies;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -21,7 +20,7 @@ public class CapturePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentCaptureRequest("2GG279541U471931P", body!);
@@ -42,7 +41,7 @@ public class CapturePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentCaptureRequest("2GG279541U471931P", body!);
@@ -63,7 +62,7 @@ public class CapturePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentCaptureRequest("2GG279541U471931P", body!);
@@ -84,7 +83,7 @@ public class CapturePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentCaptureRequest("2GG279541U471931P", body!);
@@ -105,7 +104,7 @@ public class CapturePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentCaptureRequest("2GG279541U471931P", body!);
@@ -126,7 +125,7 @@ public class CapturePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentCaptureRequest("2GG279541U471931P", body!);
@@ -147,7 +146,7 @@ public class CapturePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentCaptureRequest("2GG279541U471931P", body!);
@@ -168,7 +167,7 @@ public class CapturePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentCaptureRequest("2GG279541U471931P", body!);
@@ -189,7 +188,7 @@ public class CapturePaymentTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new PaymentCaptureRequest("2GG279541U471931P", body!);

@@ -1,7 +1,11 @@
 {
   "endpoint": "v2/checkout/orders/5O190127TN364715T/track",
   "statusCode": 400,
-  "request": {},
+  "request": {
+    "capture_id": "8MC585209K746392H",
+    "tracking_number": "443844607820",
+    "carrier": "GLS"
+  },
   "response": {
     "name": "INVALID_REQUEST",
     "message": "Request is not well-formed, syntactically incorrect, or violates schema.",

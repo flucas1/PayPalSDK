@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Subscriptions;
 using Tavstal.PayPalSDK.Models.Subscriptions.Bodies;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -18,7 +17,7 @@ public class SubscriptionCaptureTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<SubscriptionCaptureRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<SubscriptionCaptureRequestBody>();
         body.Should().NotBeNull();
         
         var request = new SubscriptionCaptureRequest("I-BW452GLLEP1G", body!);

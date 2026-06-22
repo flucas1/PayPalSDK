@@ -92,7 +92,7 @@ public class TrackerInformation
     /// </summary>
     [JsonPropertyName("fulfillment_provider")]
     [StringLength(64)]
-    public string? FullfilmentProvider { get; set; }
+    public string? FulfillmentProvider { get; set; }
     
     /// <summary>
     /// Gets or sets the list of links related to the tracker.

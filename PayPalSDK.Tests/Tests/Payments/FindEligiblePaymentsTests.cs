@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.Common.Payments.EligibleMethod;
 using Tavstal.PayPalSDK.Models.Payments;
@@ -22,7 +21,7 @@ public class FindEligiblePaymentsTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentFindEligibleMethodsRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentFindEligibleMethodsRequestBody>();
         body.Should().NotBeNull();
         
         var request = new  PaymentFindEligibleMethodsRequest(body!);
@@ -42,7 +41,7 @@ public class FindEligiblePaymentsTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentFindEligibleMethodsRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentFindEligibleMethodsRequestBody>();
         body.Should().NotBeNull();
         
         var request = new  PaymentFindEligibleMethodsRequest(body!);
@@ -63,7 +62,7 @@ public class FindEligiblePaymentsTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentFindEligibleMethodsRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentFindEligibleMethodsRequestBody>();
         body.Should().NotBeNull();
         
         var request = new  PaymentFindEligibleMethodsRequest(body!);
@@ -84,7 +83,7 @@ public class FindEligiblePaymentsTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentFindEligibleMethodsRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentFindEligibleMethodsRequestBody>();
         body.Should().NotBeNull();
         
         var request = new  PaymentFindEligibleMethodsRequest(body!);
@@ -105,7 +104,7 @@ public class FindEligiblePaymentsTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentFindEligibleMethodsRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentFindEligibleMethodsRequestBody>();
         body.Should().NotBeNull();
         
         var request = new  PaymentFindEligibleMethodsRequest(body!);
@@ -126,7 +125,7 @@ public class FindEligiblePaymentsTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentFindEligibleMethodsRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentFindEligibleMethodsRequestBody>();
         body.Should().NotBeNull();
         
         var request = new  PaymentFindEligibleMethodsRequest(body!);

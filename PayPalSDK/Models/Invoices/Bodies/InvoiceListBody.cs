@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
@@ -9,7 +8,6 @@ namespace Tavstal.PayPalSDK.Models.Invoices.Bodies;
 /// Represents the body of a response containing a list of PayPal invoices.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class InvoiceListBody
 {
     /// <summary>

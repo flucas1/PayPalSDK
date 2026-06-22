@@ -1,0 +1,2 @@
+[PayPalSDK/Models/**/*.cs]
+resharper_classneverinstantiated_global = none

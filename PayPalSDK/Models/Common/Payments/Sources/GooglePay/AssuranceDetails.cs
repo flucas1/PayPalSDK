@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
@@ -8,7 +7,6 @@ namespace Tavstal.PayPalSDK.Models.Common.Payments.Sources.GooglePay;
 /// Represents assurance details for a Google Pay payment source within the PayPal SDK.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class AssuranceDetails
 {
     /// <summary>

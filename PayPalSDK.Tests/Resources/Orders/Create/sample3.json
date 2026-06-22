@@ -2,6 +2,7 @@
   "endpoint": "v2/checkout/orders",
   "statusCode": 201,
   "request": {
+    "intent": "CAPTURE",
     "purchase_units": [
       {
         "amount": {

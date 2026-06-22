@@ -11,6 +11,7 @@ using Tavstal.PayPalSDK.Models.Common.Disputes.Details.Extensions.Merchandize;
 using Tavstal.PayPalSDK.Models.Common.Invoices;
 using Tavstal.PayPalSDK.Models.Common.Orders;
 using Tavstal.PayPalSDK.Models.Common.Orders.Supplementary;
+using Tavstal.PayPalSDK.Models.Common.PaymentMethodTokens;
 using Tavstal.PayPalSDK.Models.Common.PaymentResources;
 using Tavstal.PayPalSDK.Models.Common.PaymentResources.CodeSnippet;
 using Tavstal.PayPalSDK.Models.Common.PaymentResources.LineItem;
@@ -147,8 +148,8 @@ namespace Tavstal.PayPalSDK.Serialization;
 [JsonSerializable(typeof(List<DisputeAcknowledgeReturnItem>))]
 [JsonSerializable(typeof(DisputeAcknowledgeReturnRequestBody))]
 [JsonSerializable(typeof(List<DisputeAcknowledgeReturnRequestBody>))]
-[JsonSerializable(typeof(DisputeAdjucation))]
-[JsonSerializable(typeof(List<DisputeAdjucation>))]
+[JsonSerializable(typeof(DisputeAdjudication))]
+[JsonSerializable(typeof(List<DisputeAdjudication>))]
 [JsonSerializable(typeof(DisputeAllowedResponseOptions))]
 [JsonSerializable(typeof(List<DisputeAllowedResponseOptions>))]
 [JsonSerializable(typeof(DisputeAppealRequestBody))]
@@ -473,8 +474,8 @@ namespace Tavstal.PayPalSDK.Serialization;
 [JsonSerializable(typeof(List<SellerPayable>))]
 [JsonSerializable(typeof(SellerProtection))]
 [JsonSerializable(typeof(List<SellerProtection>))]
-[JsonSerializable(typeof(SellerRecievable))]
-[JsonSerializable(typeof(List<SellerRecievable>))]
+[JsonSerializable(typeof(SellerReceivable))]
+[JsonSerializable(typeof(List<SellerReceivable>))]
 [JsonSerializable(typeof(ServiceDetails))]
 [JsonSerializable(typeof(List<ServiceDetails>))]
 [JsonSerializable(typeof(ShipmentInfo))]

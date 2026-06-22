@@ -2,6 +2,7 @@
   "endpoint": "v2/checkout/orders",
   "statusCode": 422,
   "request": {
+    "intent": "CAPTURE",
     "payment_source": {
       "paypal": {
         "experience_context": {

@@ -1,6 +1,6 @@
 using System.Net.Http.Json;
+using System.Text.Json;
 using System.Text.Json.Serialization.Metadata;
-using Tavstal.PayPalSDK.Config;
 using Tavstal.PayPalSDK.Http;
 using Tavstal.PayPalSDK.Serialization;
 using Tavstal.PayPalSDK.Tests.Mocks;
@@ -13,30 +13,14 @@ namespace Tavstal.PayPalSDK.Tests.Helpers;
 public static class FakeHttpHelpers
 {
     /// <summary>
-    /// Create a test instance of <see cref="PayPalHttpClient"/> that routes HTTP requests to a
-    /// custom responder delegate.
+    /// Creates a new <see cref="FakePayPalHttpClient"/> with the specified responder function.
     /// </summary>
     /// <param name="responder">
-    /// A synchronous delegate that receives the outgoing <see cref="HttpRequestMessage"/> and
-    /// returns a prepared <see cref="HttpResponseMessage"/>. The delegate is invoked by a
-    /// test <see cref="HttpMessageHandler"/> implementation (<see cref="HttpMessageMockHandler"/>).
+    /// A function that takes an <see cref="HttpRequestMessage"/> and returns an <see cref="HttpResponseMessage"/>.
     /// </param>
-    /// <returns>
-    /// A <see cref="PayPalHttpClient"/> instance configured to use an <see cref="HttpClient"/>
-    /// backed by the test handler. The returned client is safe to use in unit and contract tests
-    /// and will not perform real network calls.
-    /// </returns>
-    public static PayPalHttpClient CreateClient(Func<HttpRequestMessage, HttpResponseMessage> responder)
-    {
-        var env = new SandboxEnvironment("fake-client-id", "fake-client-secret");
-        var handler = new HttpMessageMockHandler(responder);
-        var httpClient = new HttpClient(handler)
-        {
-            BaseAddress = new Uri(env.BaseUrl)
-        };
-        var clientWithInjectedHttp = new PayPalHttpClient(env, httpClient);
-        return clientWithInjectedHttp;
-    }
+    /// <returns>A new <see cref="FakePayPalHttpClient"/> instance.</returns>
+    public static FakePayPalHttpClient CreateClient(Func<HttpRequestMessage, HttpResponseMessage> responder) =>
+        new FakePayPalHttpClient(responder);
     
     /// <summary>
     /// Reads and deserializes the HTTP content using the SDK's source-generated JSON context.
@@ -53,5 +37,22 @@ public static class FakeHttpHelpers
         if (typeInfo == null)
             throw new InvalidOperationException($"Type {typeof(T).Name} is not registered in the provided JsonSerializerContext.");
         return content.ReadFromJsonAsync(typeInfo);
+    }
+    
+    /// <summary>
+    /// Deserializes a JSON string using the SDK's source-generated JSON context.
+    /// </summary>
+    /// <typeparam name="T">The type to deserialize the JSON string into.</typeparam>
+    /// <param name="json">The JSON string to deserialize.</param>
+    /// <returns>The deserialized instance of <typeparamref name="T"/>, or <c>null</c> if deserialization fails.</returns>
+    /// <exception cref="InvalidOperationException">
+    /// Thrown when <typeparamref name="T"/> is not registered in <see cref="PayPalSDKJsonContext"/>.
+    /// </exception>
+    public static T? DeserializeJson<T>(this string json)
+    {
+        var typeInfo = (JsonTypeInfo<T>?)PayPalSDKJsonContext.Default.GetTypeInfo(typeof(T));
+        if (typeInfo == null)
+            throw new InvalidOperationException($"Type {typeof(T).Name} is not registered in the provided JsonSerializerContext.");
+        return JsonSerializer.Deserialize(json, typeInfo);
     }
 }

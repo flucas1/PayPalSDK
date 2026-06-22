@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
@@ -14,7 +13,6 @@ namespace Tavstal.PayPalSDK.Models.Payments.Bodies;
 /// Represents the body of a PayPal payment transaction.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class AuthorizedPaymentBody
 {
     /// <summary>

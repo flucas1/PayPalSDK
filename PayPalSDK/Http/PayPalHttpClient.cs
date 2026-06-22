@@ -9,7 +9,7 @@ namespace Tavstal.PayPalSDK.Http;
 /// <summary>
 /// Represents a PayPal HTTP client for sending requests to the PayPal API.
 /// </summary>
-public class PayPalHttpClient
+public class PayPalHttpClient : IDisposable
 {
     private readonly HttpClient _httpClient;
     private AccessToken? _accessToken;
@@ -67,6 +67,14 @@ public class PayPalHttpClient
             _httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(agent);
         }
     }
+    
+    /// <summary>
+    /// Disposes the underlying HttpClient instance.
+    /// </summary>
+    public void Dispose()
+    {
+        _httpClient.Dispose();
+    }
 
     /// <summary>
     /// Sends an asynchronous HTTP request to the PayPal API.
@@ -75,7 +83,7 @@ public class PayPalHttpClient
     /// <param name="request">The HTTP request to send.</param>
     /// <param name="cancellationToken">A cancellation token that can be used to cancel the operation.</param>
     /// <returns>A task representing the asynchronous operation, containing the HTTP response.</returns>
-    public async Task<HttpResponseMessage> SendAsync(HttpRequestBase request, CancellationToken cancellationToken = default)
+    public virtual async Task<HttpResponseMessage> SendAsync(HttpRequestBase request, CancellationToken cancellationToken = default)
     {
         // Adds the Authorization header if missing, fetching a new access token if necessary.
         if (!request.Headers.Contains("Authorization"))
@@ -130,4 +138,6 @@ public class PayPalHttpClient
             throw new InvalidOperationException("Failed to retrieve access token", ex);
         }
     }
+
+    
 }

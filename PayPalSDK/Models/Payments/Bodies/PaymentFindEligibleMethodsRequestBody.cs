@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common.Orders;
@@ -10,7 +9,6 @@ namespace Tavstal.PayPalSDK.Models.Payments.Bodies;
 /// Represents the request body used to find eligible payment methods for a customer.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class PaymentFindEligibleMethodsRequestBody
 {
     /// <summary>

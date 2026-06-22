@@ -1,9 +1,6 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using Tavstal.PayPalSDK.Models.Common;
-
-// ReSharper disable CollectionNeverUpdated.Global
 
 namespace Tavstal.PayPalSDK.Models.ProductCatalog.Bodies;
 
@@ -11,7 +8,6 @@ namespace Tavstal.PayPalSDK.Models.ProductCatalog.Bodies;
 /// Represents the body of a product list response.
 /// </summary>
 [DataContract]
-[SuppressMessage("ReSharper", "ClassNeverInstantiated.Global")]
 public class ProductListBody
 {
     /// <summary>

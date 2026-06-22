@@ -60,7 +60,7 @@ public class Tracker
     /// </summary>
     [JsonPropertyName("fulfillment_provider")]
     [StringLength(64)]
-    public string? FullfilmentProvider { get; set; }
+    public string? FulfillmentProvider { get; set; }
     
     /// <summary>
     /// Gets or sets the tracking number type.

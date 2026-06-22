@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Common;
 using Tavstal.PayPalSDK.Models.PaymentMethodTokens;
 using Tavstal.PayPalSDK.Models.PaymentMethodTokens.Bodies;
@@ -22,7 +21,7 @@ public class CreatePaymentTokenTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentTokenCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentTokenCreateRequestBody>();
         body.Should().NotBeNull();
 
         var request = new PaymentTokenCreateRequest(body!);
@@ -42,7 +41,7 @@ public class CreatePaymentTokenTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentTokenCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentTokenCreateRequestBody>();
         body.Should().NotBeNull();
 
         var request = new PaymentTokenCreateRequest(body!);
@@ -80,7 +79,7 @@ public class CreatePaymentTokenTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<PaymentTokenCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentTokenCreateRequestBody>();
         body.Should().NotBeNull();
        
         var request = new PaymentTokenCreateRequest(body!);
@@ -100,7 +99,7 @@ public class CreatePaymentTokenTests : TestBase
         var resource = _resources[4];
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
-        var body = JsonConvert.DeserializeObject<PaymentTokenCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentTokenCreateRequestBody>();
         body.Should().NotBeNull();
        
         var request = new PaymentTokenCreateRequest(body!);
@@ -120,7 +119,7 @@ public class CreatePaymentTokenTests : TestBase
         var resource = _resources[5];
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
-        var body = JsonConvert.DeserializeObject<PaymentTokenCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentTokenCreateRequestBody>();
         body.Should().NotBeNull();
        
         var request = new PaymentTokenCreateRequest(body!);
@@ -140,7 +139,7 @@ public class CreatePaymentTokenTests : TestBase
         var resource = _resources[6];
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
 
-        var body = JsonConvert.DeserializeObject<PaymentTokenCreateRequestBody>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<PaymentTokenCreateRequestBody>();
         body.Should().NotBeNull();
        
         var request = new PaymentTokenCreateRequest(body!);

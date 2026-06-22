@@ -1,5 +1,4 @@
 using System.Net;
-using Newtonsoft.Json;
 using Tavstal.PayPalSDK.Models.Tracking;
 using Tavstal.PayPalSDK.Models.Tracking.Bodies;
 using Tavstal.PayPalSDK.Tests.Helpers;
@@ -19,7 +18,7 @@ public class TrackingUpdateTests : TestBase
         var client = FakeHttpHelpers.CreateClient(resource.Responder);
         
         resource.JsonRequest.Should().NotBeNullOrEmpty();
-        var body = JsonConvert.DeserializeObject<Tracker>(resource.JsonRequest!);
+        var body = resource.JsonRequest!.DeserializeJson<Tracker>();
         body.Should().NotBeNull();
         
         var request = new TrackingUpdateRequest("8MC585209K746392H-443844607820", body!);
